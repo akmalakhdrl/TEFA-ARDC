@@ -176,6 +176,97 @@ svg.brand-icon.small{width:32px;height:32px}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
 .reveal.reveal-active{opacity:1;transform:none}
 
+/* ---------- Spesialisasi Kami (Blueprint Grid & Glass Cards) ---------- */
+.specializations-section {
+  background-color: #0b1120;
+  background-image: 
+    radial-gradient(at 50% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 60%),
+    linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 229, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+}
+.specializations-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+  margin-top: 36px;
+}
+.spec-card {
+  padding: 32px 26px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(22, 33, 65, 0.45) 0%, rgba(13, 22, 40, 0.22) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.spec-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 100% 100%, rgba(0, 229, 255, 0.08) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.spec-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 229, 255, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 229, 255, 0.12);
+}
+.spec-card:hover::before {
+  opacity: 1;
+}
+.spec-glow-blue {
+  border-color: rgba(0, 229, 255, 0.25);
+  box-shadow: 0 12px 42px rgba(0, 229, 255, 0.08);
+}
+.spec-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: var(--transition);
+}
+.spec-card:hover .spec-icon-wrapper {
+  background: rgba(0, 229, 255, 0.12);
+  border-color: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+}
+.spec-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 229, 255, 0.25));
+}
+.spec-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+.spec-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width:980px){
   .hero-inner{grid-template-columns:1fr}
