@@ -97,10 +97,59 @@ svg.brand-icon.small{width:32px;height:32px}
 .stats-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
 
 .project{overflow:hidden}
-.project-media{height:160px;background:linear-gradient(135deg, rgba(0,0,0,0.25), rgba(0,0,0,0.4));display:flex;align-items:flex-end;padding:16px}
+.project-media{height:160px;background:linear-gradient(135deg, rgba(0,0,0,0.25), rgba(0,0,0,0.4));display:flex;align-items:flex-end;padding:16px;position:relative}
 .project-body{padding:12px}
 .animated-card{transition:transform .6s cubic-bezier(.2,.9,.2,1), box-shadow .4s}
 .animated-card:hover{transform:translateY(-10px);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+
+/* ---------- Interactive Gallery Card ---------- */
+.project-bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.6s cubic-bezier(0.2, 0.9, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+.primary-bg {
+  opacity: 1;
+  z-index: 1;
+}
+.secondary-bg {
+  opacity: 0;
+  z-index: 2;
+  transform: scale(1.08);
+}
+.project-with-gallery:hover .primary-bg {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.project-with-gallery:hover .secondary-bg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- Badge Styling ---------- */
+.proj-badge {
+  background: rgba(0, 229, 255, 0.15);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 10;
+  transition: var(--transition);
+}
+.animated-card:hover .proj-badge {
+  background: rgba(255, 138, 61, 0.2);
+  border-color: rgba(255, 138, 61, 0.45);
+  color: var(--accent2);
+  box-shadow: 0 0 10px rgba(255, 138, 61, 0.2);
+}
 
 /* ---------- Stats ---------- */
 .stat .num{font-size:28px;font-weight:800;color:var(--accent)}
