@@ -1,286 +1,296 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ARDEC | automation and robotic development center</title>
-  <meta name="description" content="ARDEC - Solusi otomasi industri, smart factory, dan IoT. Perusahaan rekayasa industri dengan tampilan premium dan futuristik.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ARDEC | automation and robotic development center</title>
+    <meta name="description"
+        content="ARDEC - Solusi otomasi industri, smart factory, dan IoT. Perusahaan rekayasa industri dengan tampilan premium dan futuristik.">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css?v=20260517">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css?v=20260517">
 </head>
+
 <body>
-  <!-- Loading overlay -->
-  <div id="loader" class="loader">
-    <div class="spinner"></div>
-  </div>
-
-  <!-- Navbar -->
-  <header id="site-header" class="header transparent">
-    <div class="wrap">
-      <a href="#" class="brand">
-        <img src="logo_ardc.png" alt="ARDEC Logo" class="brand-icon">
-        <span class="brand-text">
-          <span class="brand-name">ARDEC</span>
-          <span class="brand-tag">automation and robotic development center</span>
-        </span>
-      </a>
-
-      <nav class="nav">
-        <ul>
-          <li><a href="#hero">Beranda</a></li>
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#services">Layanan</a></li>
-          <li><a href="#portfolio">Proyek</a></li>
-          <li><a href="#advantages">Keunggulan</a></li>
-          <li><a href="#stats">Statistik</a></li>
-          <li><a href="#contact">Kontak</a></li>
-        </ul>
-      </nav>
-
-      <div class="ctas">
-        <a href="#contact" class="btn btn-outline">Kontak</a>
-        <a href="#portfolio" class="btn btn-primary">Lihat Proyek</a>
-      </div>
-
-      <button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu">☰</button>
+    <!-- Loading overlay -->
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
     </div>
-  </header>
 
-  <!-- Hero -->
-  <section id="hero" class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <h1 class="title">Otomasi Industri untuk Era <span class="accent">Smart Factory</span></h1>
-        <p class="lead">Solusi rekayasa, platform IoT, dan sistem otomasi turnkey untuk Industri 4.0 — dari konsep hingga commissioning.</p>
+    <!-- Navbar -->
+    <header id="site-header" class="header transparent">
+        <div class="wrap">
+            <a href="#" class="brand">
+                <img src="logo_ardc.png" alt="ARDEC Logo" class="brand-icon">
+                <span class="brand-text">
+                    <span class="brand-name">ARDEC</span>
+                    <span class="brand-tag">automation and robotic development center</span>
+                </span>
+            </a>
 
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Hubungi Kami</a>
-          <a href="#portfolio" class="btn btn-ghost">Lihat Proyek</a>
-          <a href="#" id="whatsapp-cta" class="btn btn-floating">💬 WhatsApp</a>
-        </div>
-      </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#portfolio">Proyek</a></li>
+                    <li><a href="#advantages">Keunggulan</a></li>
+                    <li><a href="#stats">Statistik</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
 
-      <div class="hero-cards">
-        <!-- Glassmorphism cards with animated icons -->
-        <div class="card glass card-1 reveal">
-          <div class="icon"><img src="assets/icons/factory.svg" alt="pabrik"></div>
-          <h4>Smart Factory</h4>
-          <p>Garis produksi modular dengan telemetri real-time dan predictive maintenance.</p>
-          <a class="link" href="#services">Pelajari Lebih Lanjut</a>
-        </div>
-
-        <div class="card glass card-2 reveal">
-          <div class="icon"><img src="assets/icons/microchip.svg" alt="microchip"></div>
-          <h4>IoT & Konektivitas</h4>
-          <p>Manajemen perangkat yang aman dan platform IoT industri end-to-end.</p>
-          <a class="link" href="#services">Pelajari Lebih Lanjut</a>
-        </div>
-
-        <div class="card glass card-3 reveal">
-          <div class="icon"><img src="assets/icons/automation.svg" alt="automation"></div>
-          <h4>Otomasi & Kontrol</h4>
-          <p>Sistem PLC/HMI, integrasi robotika, dan solusi SCADA.</p>
-          <a class="link" href="#services">Pelajari Lebih Lanjut</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="wrap section-inner">
-      <div class="split">
-        <div class="text reveal">
-          <h2>Tentang ARDEC</h2>
-          <p>ARDEC adalah perusahaan rekayasa yang berfokus pada otomasi, platform IoT industri, dan transformasi smart factory. Kami memadukan rekayasa sistem dan data science untuk meningkatkan ketersediaan dan produktivitas pabrik.</p>
-          <ul class="bullets">
-            <li>Proyek otomasi turnkey</li>
-            <li>IoT industri & analitik</li>
-            <li>Engineering & integrasi kustom</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline">Pelajari Lebih Lanjut</a>
-        </div>
-        <div class="media reveal">
-          <div class="media-img glass">
-            <!-- subtle illustration / placeholder -->
-            <img src="assets/icons/engineering.svg" alt="engineering">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section alt">
-    <div class="wrap">
-      <h3 class="section-title reveal">Layanan Kami</h3>
-      <div class="grid services-grid">
-        <div class="service card glass reveal">
-          <div class="s-icon"><img src="assets/icons/gear.svg" alt="gear"></div>
-          <h4>Rekayasa Sistem</h4>
-          <p>Analisis kebutuhan, desain sistem, dan validasi.</p>
-        </div>
-        <div class="service card glass reveal">
-          <div class="s-icon"><img src="assets/icons/automation.svg" alt="automation"></div>
-          <h4>Kontrol & PLC</h4>
-          <p>Sistem kontrol handal sesuai standar IEC-61131.</p>
-        </div>
-        <div class="service card glass reveal">
-          <div class="s-icon"><img src="assets/icons/microchip.svg" alt="microchip"></div>
-          <h4>IoT & Edge</h4>
-          <p>Gateway edge, telemetri, dan integrasi ke cloud.</p>
-        </div>
-        <div class="service card glass reveal">
-          <div class="s-icon"><img src="assets/icons/factory.svg" alt="factory"></div>
-          <h4>Digital Twin</h4>
-          <p>Simulasi dan visualisasi untuk optimasi proses.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio" class="section">
-    <div class="wrap">
-      <h3 class="section-title reveal">Proyek Terpilih</h3>
-      <div class="grid portfolio-grid">
-        <article class="project card glass reveal animated-card">
-          <div class="project-media" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.35));">
-            <div class="proj-badge">Lini Produksi</div>
-          </div>
-          <div class="project-body">
-            <h4>Garis Pengemasan Otomatis</h4>
-            <p>Integrasi vision, robotika, dan kontrol PLC untuk operasi 24/7.</p>
-            <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
-          </div>
-        </article>
-
-        <article class="project card glass reveal animated-card">
-          <div class="project-media"></div>
-          <div class="project-body">
-            <h4>Platform Monitoring Cerdas</h4>
-            <p>Platform IoT dengan analitik prediktif dan dashboard.</p>
-            <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
-          </div>
-        </article>
-
-        <article class="project card glass reveal animated-card">
-          <div class="project-media"></div>
-          <div class="project-body">
-            <h4>Modernisasi Retrofit Line</h4>
-            <p>Migrasi PLC legacy dan program modernisasi.</p>
-            <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Advantages -->
-  <section id="advantages" class="section alt">
-    <div class="wrap">
-      <h3 class="section-title reveal">Keunggulan Kami</h3>
-      <div class="grid advantages-grid">
-        <div class="adv card glass reveal">
-          <h4>Keunggulan Rekayasa</h4>
-          <p>Tim multidisiplin dengan pengalaman mendalam.</p>
-        </div>
-        <div class="adv card glass reveal">
-          <h4>Kecepatan Implementasi</h4>
-          <p>Waktu ke nilai yang cepat dengan solusi modular.</p>
-        </div>
-        <div class="adv card glass reveal">
-          <h4>Berbasis Data</h4>
-          <p>Pendekatan analytics-first untuk perbaikan berkelanjutan.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Statistics -->
-  <section id="stats" class="section stats">
-    <div class="wrap">
-      <h3 class="section-title reveal">Dampak Kami</h3>
-      <div class="grid stats-grid">
-        <div class="stat card glass reveal">
-          <div class="num" data-target="128">0</div>
-          <div class="label">Proyek Terselesaikan</div>
-        </div>
-        <div class="stat card glass reveal">
-          <div class="num" data-target="75">0</div>
-          <div class="label">Klien</div>
-        </div>
-        <div class="stat card glass reveal">
-          <div class="num" data-target="250">0</div>
-          <div class="label">Sensor Terpasang</div>
-        </div>
-        <div class="stat card glass reveal">
-          <div class="num" data-target="99">0</div>
-          <div class="label">Uptime %</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <div class="wrap">
-      <div class="split contact-inner">
-        <div class="contact-form card glass reveal">
-          <h3>Kontak</h3>
-          <p>Mulai transformasi digital Anda hari ini.</p>
-          <form id="contactForm">
-            <input type="text" name="name" placeholder="Nama Anda" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Pesan" rows="4" required></textarea>
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Kirim Pesan</button>
-              <a href="#" id="whatsapp-quick" class="btn btn-ghost">Chat WhatsApp</a>
+            <div class="ctas">
+                <a href="#contact" class="btn btn-outline">Kontak</a>
+                <a href="#portfolio" class="btn btn-primary">Lihat Proyek</a>
             </div>
-          </form>
-        </div>
 
-        <div class="contact-info reveal">
-          <h4>Lokasi Kantor</h4>
-          <p>Gedung TEFA Lantai 3, Semarang</p>
-          <ul class="contact-list">
-            <li>📞 +62 812-3456-7890</li>
-            <li>✉️ info@ardcenter.id</li>
-            <li>📍 Jl. Gubernur Mochtar, Tembalang</li>
-          </ul>
-          <div class="contact-map glass">
-            <!-- Decorative map placeholder -->
-            <img src="assets/icons/factory.svg" alt="map" style="opacity:.08; width:100%;">
-          </div>
+            <button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu">☰</button>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <div class="brand-legal">
-        <img src="logo_ardc.png" alt="ARDEC Logo" class="brand-icon small">
-        <div>
-          <strong>ARDEC</strong>
-          <div class="muted">Automation and Robotic Development Center</div>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="wrap hero-inner">
+            <div class="hero-copy">
+                <h1 class="title">Otomasi Industri untuk Era <span class="accent">Smart Factory</span></h1>
+                <p class="lead">Solusi rekayasa, platform IoT, dan sistem otomasi turnkey untuk Industri 4.0 — dari
+                    konsep hingga commissioning.</p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Hubungi Kami</a>
+                    <a href="#portfolio" class="btn btn-ghost">Lihat Proyek</a>
+                    <a href="#" id="whatsapp-cta" class="btn btn-floating">💬 WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="hero-cards">
+                <!-- Glassmorphism cards with animated icons -->
+                <div class="card glass card-1 reveal">
+                    <div class="icon"><img src="assets/icons/factory.svg" alt="pabrik"></div>
+                    <h4>Smart Factory</h4>
+                    <p>Garis produksi modular dengan telemetri real-time dan predictive maintenance.</p>
+                    <a class="link" href="#services">Pelajari Lebih Lanjut</a>
+                </div>
+
+                <div class="card glass card-2 reveal">
+                    <div class="icon"><img src="assets/icons/microchip.svg" alt="microchip"></div>
+                    <h4>IoT & Konektivitas</h4>
+                    <p>Manajemen perangkat yang aman dan platform IoT industri end-to-end.</p>
+                    <a class="link" href="#services">Pelajari Lebih Lanjut</a>
+                </div>
+
+                <div class="card glass card-3 reveal">
+                    <div class="icon"><img src="assets/icons/automation.svg" alt="automation"></div>
+                    <h4>Otomasi & Kontrol</h4>
+                    <p>Sistem PLC/HMI, integrasi robotika, dan solusi SCADA.</p>
+                    <a class="link" href="#services">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="foot-links">
-        <a href="#about">Tentang</a>
-        <a href="#services">Layanan</a>
-        <a href="#contact">Kontak</a>
-      </div>
-      <div class="copyright">© 2026 ARDEC. All rights reserved.</div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="script.js?v=20260517"></script>
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="wrap section-inner">
+            <div class="split">
+                <div class="text reveal">
+                    <h2>Tentang ARDEC</h2>
+                    <p>ARDEC adalah perusahaan rekayasa yang berfokus pada otomasi, platform IoT industri, dan
+                        transformasi smart factory. Kami memadukan rekayasa sistem dan data science untuk meningkatkan
+                        ketersediaan dan produktivitas pabrik.</p>
+                    <ul class="bullets">
+                        <li>Proyek otomasi turnkey</li>
+                        <li>IoT industri & analitik</li>
+                        <li>Engineering & integrasi kustom</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Pelajari Lebih Lanjut</a>
+                </div>
+                <div class="media reveal">
+                    <div class="media-img glass">
+                        <!-- subtle illustration / placeholder -->
+                        <img src="assets/icons/engineering.svg" alt="engineering">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section alt">
+        <div class="wrap">
+            <h3 class="section-title reveal">Layanan Kami</h3>
+            <div class="grid services-grid">
+                <div class="service card glass reveal">
+                    <div class="s-icon"><img src="assets/icons/gear.svg" alt="gear"></div>
+                    <h4>Rekayasa Sistem</h4>
+                    <p>Analisis kebutuhan, desain sistem, dan validasi.</p>
+                </div>
+                <div class="service card glass reveal">
+                    <div class="s-icon"><img src="assets/icons/automation.svg" alt="automation"></div>
+                    <h4>Kontrol & PLC</h4>
+                    <p>Sistem kontrol handal sesuai standar IEC-61131.</p>
+                </div>
+                <div class="service card glass reveal">
+                    <div class="s-icon"><img src="assets/icons/microchip.svg" alt="microchip"></div>
+                    <h4>IoT & Edge</h4>
+                    <p>Gateway edge, telemetri, dan integrasi ke cloud.</p>
+                </div>
+                <div class="service card glass reveal">
+                    <div class="s-icon"><img src="assets/icons/factory.svg" alt="factory"></div>
+                    <h4>Digital Twin</h4>
+                    <p>Simulasi dan visualisasi untuk optimasi proses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section">
+        <div class="wrap">
+            <h3 class="section-title reveal">Proyek Terpilih</h3>
+            <div class="grid portfolio-grid">
+                <article class="project card glass reveal animated-card">
+                    <div class="project-media"
+                        style="background-image: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.35));">
+                        <div class="proj-badge">Lini Produksi</div>
+                    </div>
+                    <div class="project-body">
+                        <h4>Garis Pengemasan Otomatis</h4>
+                        <p>Integrasi vision, robotika, dan kontrol PLC untuk operasi 24/7.</p>
+                        <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
+                    </div>
+                </article>
+
+                <article class="project card glass reveal animated-card">
+                    <div class="project-media"></div>
+                    <div class="project-body">
+                        <h4>Platform Monitoring Cerdas</h4>
+                        <p>Platform IoT dengan analitik prediktif dan dashboard.</p>
+                        <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
+                    </div>
+                </article>
+
+                <article class="project card glass reveal animated-card">
+                    <div class="project-media"></div>
+                    <div class="project-body">
+                        <h4>Modernisasi Retrofit Line</h4>
+                        <p>Migrasi PLC legacy dan program modernisasi.</p>
+                        <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages -->
+    <section id="advantages" class="section alt">
+        <div class="wrap">
+            <h3 class="section-title reveal">Keunggulan Kami</h3>
+            <div class="grid advantages-grid">
+                <div class="adv card glass reveal">
+                    <h4>Keunggulan Rekayasa</h4>
+                    <p>Tim multidisiplin dengan pengalaman mendalam.</p>
+                </div>
+                <div class="adv card glass reveal">
+                    <h4>Kecepatan Implementasi</h4>
+                    <p>Waktu ke nilai yang cepat dengan solusi modular.</p>
+                </div>
+                <div class="adv card glass reveal">
+                    <h4>Berbasis Data</h4>
+                    <p>Pendekatan analytics-first untuk perbaikan berkelanjutan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section id="stats" class="section stats">
+        <div class="wrap">
+            <h3 class="section-title reveal">Dampak Kami</h3>
+            <div class="grid stats-grid">
+                <div class="stat card glass reveal">
+                    <div class="num" data-target="128">0</div>
+                    <div class="label">Proyek Terselesaikan</div>
+                </div>
+                <div class="stat card glass reveal">
+                    <div class="num" data-target="75">0</div>
+                    <div class="label">Klien</div>
+                </div>
+                <div class="stat card glass reveal">
+                    <div class="num" data-target="250">0</div>
+                    <div class="label">Sensor Terpasang</div>
+                </div>
+                <div class="stat card glass reveal">
+                    <div class="num" data-target="99">0</div>
+                    <div class="label">Uptime %</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+        <div class="wrap">
+            <div class="split contact-inner">
+                <div class="contact-form card glass reveal">
+                    <h3>Kontak</h3>
+                    <p>Mulai transformasi digital Anda hari ini.</p>
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Nama Anda" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Pesan" rows="4" required></textarea>
+                        <div class="form-actions">
+                            <button class="btn btn-primary" type="submit">Kirim Pesan</button>
+                            <a href="#" id="whatsapp-quick" class="btn btn-ghost">Chat WhatsApp</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-info reveal">
+                    <h4>Lokasi Kantor</h4>
+                    <p>Gedung TEFA Lantai 3, Semarang</p>
+                    <ul class="contact-list">
+                        <li>📞 +62 812-3456-7890</li>
+                        <li>✉️ info@ardcenter.id</li>
+                        <li>📍 Jl. Gubernur Mochtar, Tembalang</li>
+                    </ul>
+                    <div class="contact-map glass">
+                        <!-- Decorative map placeholder -->
+                        <img src="assets/icons/factory.svg" alt="map" style="opacity:.08; width:100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <div class="brand-legal">
+                <img src="logo_ardc.png" alt="ARDEC Logo" class="brand-icon small">
+                <div>
+                    <strong>ARDEC</strong>
+                    <div class="muted">Automation and Robotic Development Center</div>
+                </div>
+            </div>
+            <div class="foot-links">
+                <a href="#about">Tentang</a>
+                <a href="#services">Layanan</a>
+                <a href="#contact">Kontak</a>
+            </div>
+            <div class="copyright">© 2026 ARDEC. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=20260517"></script>
 </body>
+
 </html>
