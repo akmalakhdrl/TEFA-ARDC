@@ -178,17 +178,8 @@ svg.brand-icon.small{width:32px;height:32px}
 
 /* ---------- Spesialisasi Kami (Blueprint Grid & Glass Cards) ---------- */
 .specializations-section {
-  background-color: #0b1120;
-  background-image: 
-    radial-gradient(at 50% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 60%),
-    linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
-  background-size: 100% 100%, 40px 40px, 40px 40px;
-  background-position: center;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(0, 229, 255, 0.08);
-  border-bottom: 1px solid rgba(0, 229, 255, 0.08);
 }
 .specializations-grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
