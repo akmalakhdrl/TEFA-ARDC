@@ -390,6 +390,70 @@ svg.brand-icon.small{width:32px;height:32px}
   box-shadow: 0 12px 35px rgba(255, 138, 61, 0.1);
 }
 
+/* About Section Interactivity & Floating Card Animation */
+.bullets li {
+  transition: var(--transition);
+  cursor: pointer;
+}
+.bullets li:hover {
+  color: var(--accent);
+  transform: translateX(6px);
+}
+.media-img {
+  animation: floatIllustration 6s ease-in-out infinite;
+  transition: var(--transition);
+}
+.media-img:hover {
+  transform: scale(1.03) rotate(0.5deg);
+  border-color: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 15px 45px rgba(0, 229, 255, 0.15);
+}
+@keyframes floatIllustration {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Portfolio Button Highlight on Hover */
+.project:hover .btn-ghost.small {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #020608;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.35);
+}
+
+/* Statistics Cards Interactivity */
+.stat {
+  transition: var(--transition);
+  cursor: pointer;
+}
+.stat:hover {
+  transform: scale(1.05);
+  border-color: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 12px 35px rgba(0, 229, 255, 0.12);
+}
+.stat:hover .num {
+  color: var(--accent2);
+  text-shadow: 0 0 10px rgba(255, 138, 61, 0.25);
+}
+
+/* Contact Form Hover & Glow Focus */
+.contact-form {
+  transition: var(--transition);
+}
+.contact-form:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+.contact-form input, .contact-form textarea {
+  transition: var(--transition);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
+  outline: none;
+  background: rgba(255, 255, 255, 0.02);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width:980px){
   .hero-inner{grid-template-columns:1fr}
