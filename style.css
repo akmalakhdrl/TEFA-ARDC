@@ -258,6 +258,138 @@ svg.brand-icon.small{width:32px;height:32px}
   margin: 0;
 }
 
+/* ---------- Premium Micro-Interactions & Hover Animations ---------- */
+
+/* Services Cards & Icons */
+.service {
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.service:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 15px 45px rgba(0, 229, 255, 0.15);
+}
+.s-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+.s-icon img {
+  width: 24px;
+  height: 24px;
+  transition: var(--transition);
+}
+.service:hover .s-icon {
+  background: rgba(0, 229, 255, 0.12);
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+.service:hover .s-icon img {
+  transform: scale(1.15);
+}
+/* Specific animated icons inside Services */
+.service:hover .s-icon img[alt="gear"] {
+  transform: rotate(180deg) scale(1.2);
+}
+.service:hover .s-icon img[alt="automation"] {
+  transform: scale(1.2) translateY(-2px);
+}
+.service:hover .s-icon img[alt="microchip"] {
+  transform: scale(1.22);
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.8));
+}
+.service:hover .s-icon img[alt="factory"] {
+  transform: scale(1.18) translateY(-3px);
+}
+
+/* Specializations Card Icon Micro-animations */
+.spec-card:hover .spec-icon-wrapper img[alt="Microchip Icon"] {
+  transform: scale(1.22);
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.8));
+}
+.spec-card:hover .spec-icon-wrapper img[alt="Automation Icon"] {
+  transform: scale(1.2) translateY(-2px);
+}
+.spec-card:hover .spec-icon-wrapper img[alt="Gears Icon"] {
+  transform: rotate(180deg) scale(1.2);
+}
+
+/* Hero Cards Interactivity */
+.hero-cards .card {
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+}
+.hero-cards .card:hover {
+  transform: translateX(-6px);
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.12);
+}
+.hero-cards .card .icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  transition: var(--transition);
+}
+.hero-cards .card:hover .icon {
+  background: rgba(0, 229, 255, 0.1);
+  border-color: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
+}
+.hero-cards .card .icon img {
+  transition: var(--transition);
+}
+.hero-cards .card:hover .icon img {
+  transform: scale(1.15);
+}
+/* Specific animated icons inside Hero Cards */
+.hero-cards .card:hover .icon img[alt="pabrik"] {
+  transform: scale(1.18) translateY(-2px);
+}
+.hero-cards .card:hover .icon img[alt="iot"] {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.8));
+}
+.hero-cards .card:hover .icon img[alt="kontrol"] {
+  transform: rotate(90deg) scale(1.15);
+}
+.hero-cards .card .link {
+  transition: var(--transition);
+  display: inline-block;
+  margin-top: 8px;
+}
+.hero-cards .card:hover .link {
+  color: var(--accent2);
+  transform: translateX(4px);
+}
+
+/* Advantage Cards Interactivity */
+.advantage {
+  transition: var(--transition);
+  cursor: pointer;
+}
+.advantage:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 138, 61, 0.3);
+  box-shadow: 0 12px 35px rgba(255, 138, 61, 0.1);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width:980px){
   .hero-inner{grid-template-columns:1fr}
