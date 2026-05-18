@@ -102,4 +102,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Product Filter Tabs
+  const productTabs = document.querySelectorAll('.product-tab');
+  const productCards = document.querySelectorAll('.product-card');
+  if (productTabs.length && productCards.length) {
+    productTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Update active tab
+        productTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+        productCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
+  // Product WhatsApp CTA
+  const productBtns = document.querySelectorAll('.btn-product');
+  productBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const msg = btn.dataset.wa || 'Halo, saya tertarik dengan produk Wecon';
+      window.open(waUrl(msg), '_blank');
+    });
+  });
+
 });
