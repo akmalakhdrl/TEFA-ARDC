@@ -285,6 +285,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Training Class Dropdown
+  const trainingClassWrap = document.querySelector('.training-class-wrap');
+  const trainingSelector = document.getElementById('training-selector');
+  const trainingDropdown = document.getElementById('training-dropdown');
+  const trainingOptions = document.querySelectorAll('.training-option');
+
+  if (trainingSelector && trainingDropdown) {
+    trainingSelector.addEventListener('click', (e) => {
+      e.stopPropagation();
+      trainingClassWrap.classList.toggle('open');
+    });
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+      trainingClassWrap.classList.remove('open');
+    });
+    trainingDropdown.addEventListener('click', (e) => e.stopPropagation());
+
+    trainingOptions.forEach(opt => {
+      opt.addEventListener('click', () => {
+        const trainingType = opt.dataset.training;
+        const trainingName = opt.querySelector('span').textContent;
+        preserveScrollPosition(() => {
+          trainingOptions.forEach(o => o.classList.remove('active'));
+          opt.classList.add('active');
+          
+          const allContents = document.querySelectorAll('.training-content');
+          allContents.forEach(content => {
+            if (content.dataset.training === trainingType) {
+              content.style.display = 'block';
+            } else {
+              content.style.display = 'none';
+            }
+          });
+          
+          trainingClassWrap.classList.remove('open');
+        });
+      });
+    });
+  }
+
   // Product Filter Tabs
   const productTabs = document.querySelectorAll('.product-tab');
   const productCards = document.querySelectorAll('.product-card');

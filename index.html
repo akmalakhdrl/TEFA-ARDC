@@ -329,37 +329,39 @@
     <!-- Produk -->
     <section id="products" class="section alt products-section">
         <div class="wrap">
-            <div class="brand-selector-wrap reveal">
-                <button id="brand-selector" class="brand-selector">
-                    <span id="brand-selector-label" data-i18n="prod_prefix">Produk</span>
-                    <span id="brand-selector-name" class="brand-sel-name">Wecon</span>
-                    <span class="brand-sel-arrow">▼</span>
-                </button>
-                <div id="brand-dropdown" class="brand-dropdown glass">
-                    <button class="brand-option active" data-brand="wecon">
-                        <img src="assets/icons/partners/wecon.png" alt="Wecon" class="brand-opt-logo">
-                        <span>Wecon</span>
+            <div class="product-header-controls reveal">
+                <div class="brand-selector-wrap">
+                    <button id="brand-selector" class="brand-selector">
+                        <span id="brand-selector-label" data-i18n="prod_prefix">Produk</span>
+                        <span id="brand-selector-name" class="brand-sel-name">Wecon</span>
+                        <span class="brand-sel-arrow">▼</span>
                     </button>
-                    <button class="brand-option" data-brand="siemens">
-                        <img src="assets/icons/partners/siemens.svg" alt="Siemens" class="brand-opt-logo">
-                        <span>Siemens</span>
-                    </button>
-                    <button class="brand-option" data-brand="schneider">
-                        <img src="assets/icons/partners/schneider.svg" alt="Schneider" class="brand-opt-logo">
-                        <span>Schneider Electric</span>
-                    </button>
-                    <button class="brand-option" data-brand="omron">
-                        <img src="assets/icons/partners/omron.svg" alt="Omron" class="brand-opt-logo">
-                        <span>Omron</span>
-                    </button>
-                    <button class="brand-option" data-brand="delta">
-                        <img src="assets/icons/partners/delta.svg" alt="Delta" class="brand-opt-logo">
-                        <span>Delta Electronics</span>
-                    </button>
-                    <button class="brand-option" data-brand="mitsubishi">
-                        <img src="assets/icons/partners/mitsubishi.svg" alt="Mitsubishi" class="brand-opt-logo">
-                        <span>Mitsubishi Electric</span>
-                    </button>
+                    <div id="brand-dropdown" class="brand-dropdown glass">
+                        <button class="brand-option active" data-brand="wecon">
+                            <img src="assets/icons/partners/wecon.png" alt="Wecon" class="brand-opt-logo">
+                            <span>Wecon</span>
+                        </button>
+                        <button class="brand-option" data-brand="siemens">
+                            <img src="assets/icons/partners/siemens.svg" alt="Siemens" class="brand-opt-logo">
+                            <span>Siemens</span>
+                        </button>
+                        <button class="brand-option" data-brand="schneider">
+                            <img src="assets/icons/partners/schneider.svg" alt="Schneider" class="brand-opt-logo">
+                            <span>Schneider Electric</span>
+                        </button>
+                        <button class="brand-option" data-brand="omron">
+                            <img src="assets/icons/partners/omron.svg" alt="Omron" class="brand-opt-logo">
+                            <span>Omron</span>
+                        </button>
+                        <button class="brand-option" data-brand="delta">
+                            <img src="assets/icons/partners/delta.svg" alt="Delta" class="brand-opt-logo">
+                            <span>Delta Electronics</span>
+                        </button>
+                        <button class="brand-option" data-brand="mitsubishi">
+                            <img src="assets/icons/partners/mitsubishi.svg" alt="Mitsubishi" class="brand-opt-logo">
+                            <span>Mitsubishi Electric</span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <p class="products-subtitle reveal" id="prod-subtitle" data-i18n="prod_sub">Solusi otomasi industri terpercaya dari Wecon Indonesia</p>
@@ -478,6 +480,70 @@
                         <a href="#" class="btn btn-product" data-wa="Halo, saya tertarik dengan produk Wecon VD300A VFD">💬 Tanyakan Harga</a>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Class Section -->
+    <section id="training" class="section alt training-section">
+        <div class="wrap">
+            <div class="training-header reveal">
+                <div class="training-class-wrap">
+                    <button id="training-selector" class="training-selector">
+                        <span id="training-selector-label" data-i18n="training_menu">📚 Pelatihan</span>
+                        <span class="training-arrow">▼</span>
+                    </button>
+                    <div id="training-dropdown" class="training-dropdown glass">
+                        <button class="training-option active" data-training="automation">
+                            <span data-i18n="training_automation">Automation Class</span>
+                        </button>
+                        <button class="training-option" data-training="robotica">
+                            <span data-i18n="training_robotica">Robotica Class</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automation Class Content -->
+            <div class="training-content reveal" data-training="automation" style="display: block;">
+                <h3 class="training-content-title" data-i18n="training_auto_title">Automation Class</h3>
+                <p class="training-content-desc" data-i18n="training_auto_desc">Program pelatihan industri otomasi komprehensif mencakup PLC, HMI, VFD, dan sistem kontrol terintegrasi untuk meningkatkan kompetensi teknis industri manufaktur dan infrastruktur kritis.</p>
+                <div class="training-features">
+                    <div class="training-feature glass">
+                        <h4 data-i18n="training_auto_f1_title">PLC Programming</h4>
+                        <p data-i18n="training_auto_f1_desc">Pemrograman PLC dengan standar industri IEC 61131-3</p>
+                    </div>
+                    <div class="training-feature glass">
+                        <h4 data-i18n="training_auto_f2_title">HMI Development</h4>
+                        <p data-i18n="training_auto_f2_desc">Desain dan implementasi Human-Machine Interface interaktif</p>
+                    </div>
+                    <div class="training-feature glass">
+                        <h4 data-i18n="training_auto_f3_title">VFD Configuration</h4>
+                        <p data-i18n="training_auto_f3_desc">Konfigurasi dan optimalisasi Variable Frequency Drive</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary" data-wa="Saya tertarik dengan Automation Class training">💬 Daftar Sekarang</a>
+            </div>
+
+            <!-- Robotica Class Content -->
+            <div class="training-content reveal" data-training="robotica" style="display: none;">
+                <h3 class="training-content-title" data-i18n="training_robot_title">Robotica Class</h3>
+                <p class="training-content-desc" data-i18n="training_robot_desc">Program pelatihan robotika terapan dengan fokus pada manipulator industri, sistem visi, dan integrasi robotika untuk aplikasi manufaktur cerdas dan otomasi proses.</p>
+                <div class="training-features">
+                    <div class="training-feature glass">
+                        <h4 data-i18n="training_robot_f1_title">Robot Programming</h4>
+                        <p data-i18n="training_robot_f1_desc">Pemrograman robot manipulator dengan berbagai brand industri</p>
+                    </div>
+                    <div class="training-feature glass">
+                        <h4 data-i18n="training_robot_f2_title">Vision Systems</h4>
+                        <p data-i18n="training_robot_f2_desc">Implementasi sistem visi untuk inspeksi dan quality control</p>
+                    </div>
+                    <div class="training-feature glass">
+                        <h4 data-i18n="training_robot_f3_title">System Integration</h4>
+                        <p data-i18n="training_robot_f3_desc">Integrasi robotika dengan sistem produksi terotomasi</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary" data-wa="Saya tertarik dengan Robotica Class training">💬 Daftar Sekarang</a>
             </div>
         </div>
     </section>
