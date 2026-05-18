@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 768" role="img" aria-label="Wecon logo">
-  <polygon points="384,84 500,270 384,456 268,270" fill="#ff0000"/>
-  <polygon points="384,456 244,456 136,640 276,640" fill="#ff0000" opacity="0.92"/>
-  <polygon points="384,456 492,640 632,640 524,456" fill="#ff0000" opacity="0.92"/>
-  <polygon points="384,196 430,270 384,344 338,270" fill="#c40000" opacity="0.9"/>
+  <polygon points="384,80 480,240 384,400 288,240" fill="#d32f2f"/>
+  <polygon points="384,400 240,400 144,560 288,560" fill="#d32f2f"/>
+  <polygon points="384,400 528,560 624,560 480,400" fill="#d32f2f"/>
 </svg>
