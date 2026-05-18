@@ -125,8 +125,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mobile menu toggle
   const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileNavMenu = document.querySelector('.nav ul');
+  const closeMobileMenu = () => {
+    if (mobileNavMenu) {
+      mobileNavMenu.classList.remove('open');
+    }
+    if (mobileToggle) {
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    }
+  };
+
   mobileToggle && mobileToggle.addEventListener('click', () => {
-    document.querySelector('.nav ul').classList.toggle('open');
+    if (!mobileNavMenu) return;
+    const isOpen = mobileNavMenu.classList.toggle('open');
+    mobileToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  if (mobileNavMenu) {
+    mobileNavMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+  }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 980) {
+      closeMobileMenu();
+    }
   });
 
   // Reveal on scroll

@@ -211,7 +211,37 @@ svg.brand-icon.small{width:32px;height:32px}
 .nav a:hover{color:var(--accent);transform:translateY(-3px)}
 .ctas{margin-left:auto;display:flex;gap:12px}
 
-.mobile-toggle{display:none;background:transparent;border:0;color:var(--muted);font-size:20px}
+.mobile-toggle{
+  display:none;
+  width:44px;
+  height:44px;
+  padding:10px;
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:12px;
+  background:rgba(255,255,255,0.06);
+  color:var(--muted);
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  flex-direction:column;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  appearance:none;
+  -webkit-appearance:none;
+  position:relative;
+  z-index:140;
+}
+.mobile-toggle-bar{
+  display:block;
+  width:22px;
+  height:2px;
+  border-radius:999px;
+  background:currentColor;
+  transition:var(--transition);
+}
+.mobile-toggle:hover{border-color:rgba(0,229,255,0.4);background:rgba(0,229,255,0.1);color:var(--accent)}
+.mobile-toggle:active{transform:scale(0.96)}
 
 /* ---------- Language Toggle ---------- */
 .lang-toggle {
@@ -1369,10 +1399,28 @@ svg.brand-icon.small{width:32px;height:32px}
   .split{grid-template-columns:1fr}
   .contact-inner{grid-template-columns:1fr}
   .header.scrolled{margin:6px 14px}
-  .nav ul{display:none}
-  .mobile-toggle{display:block}
+  .header .wrap{flex-wrap:nowrap;position:relative;align-items:center}
+  .header{z-index:120}
+  .nav{position:absolute;left:14px;right:14px;top:calc(100% + 10px);width:auto;order:4;z-index:130}
+  .nav ul{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    gap:0;
+    padding:14px;
+    border-radius:16px;
+    background:rgba(13,22,40,0.96);
+    border:1px solid rgba(255,255,255,0.08);
+    box-shadow:0 18px 40px rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+  }
+  .nav ul.open{display:flex}
+  .nav li{width:100%}
+  .nav a{display:block;padding:12px 10px;border-radius:10px}
+  .nav a:hover{background:rgba(0,229,255,0.08);transform:none}
+  .mobile-toggle{display:inline-flex;margin-left:10px;flex-shrink:0}
   .ctas{display:none}
-  .lang-toggle{margin-left:auto}
+  .lang-toggle{margin-left:auto;flex-shrink:0}
   .footer-top{grid-template-columns:1fr;gap:28px}
 }
 
