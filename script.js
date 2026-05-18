@@ -279,6 +279,18 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     {
+      name: 'Wecon LX3VP-2424MR',
+      desc: 'PLC performa tinggi 24 input / 24 output dengan dukungan analog dan high-speed counter.',
+      tag: 'PLC',
+      img: 'assets/images/product_plc.png',
+      wa: 'Halo, saya tertarik dengan produk Wecon LX3VP-2424MR PLC',
+      specs: [
+        { label: 'I/O', val: '24 DI / 24 DO' },
+        { label: 'Komunikasi', val: 'Ethernet, RS485' },
+        { label: 'Program', val: '32K Steps' }
+      ]
+    },
+    {
       name: 'Wecon VD100',
       desc: 'VFD single phase 220V untuk kontrol kecepatan motor industri stabil.',
       tag: 'VFD',
@@ -286,8 +298,20 @@ document.addEventListener('DOMContentLoaded', () => {
       wa: 'Halo, saya tertarik dengan produk Wecon VD100 VFD',
       specs: [
         { label: 'Daya', val: '0.75 - 2.2 kW' },
-        { label: 'Input', val: 'Single phase 220V' },
-        { label: 'Proteksi', val: 'Overload' }
+        { label: 'Input', val: '1 Phase 220V' },
+        { label: 'Frekuensi', val: '0 - 400 Hz' }
+      ]
+    },
+    {
+      name: 'Wecon VD300A',
+      desc: 'VFD 3 phase 380V heavy-duty untuk aplikasi conveyor, pompa, dan fan industri.',
+      tag: 'VFD',
+      img: 'assets/images/product_vfd.png',
+      wa: 'Halo, saya tertarik dengan produk Wecon VD300A VFD',
+      specs: [
+        { label: 'Daya', val: '1.5 - 15 kW' },
+        { label: 'Input', val: '3 Phase 380V' },
+        { label: 'Frekuensi', val: '0 - 600 Hz' }
       ]
     }
   ];
