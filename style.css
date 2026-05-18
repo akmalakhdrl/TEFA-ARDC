@@ -127,6 +127,39 @@ svg.brand-icon.small{width:32px;height:32px}
 .advantages-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .stats-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
 
+/* Advantages Grid (inside About section) */
+.adv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.adv-box {
+  padding: 20px 16px;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  text-align: center;
+}
+.adv-box:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0,229,255,0.3);
+  box-shadow: 0 8px 30px rgba(0,229,255,0.1);
+}
+.adv-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.adv-box h4 {
+  font-size: 14px;
+  margin: 0 0 6px;
+  color: #f0f5fb;
+}
+.adv-box p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
 .project{overflow:hidden}
 .project-media{height:160px;background:linear-gradient(135deg, rgba(0,0,0,0.25), rgba(0,0,0,0.4));display:flex;align-items:flex-end;padding:16px;position:relative}
 .project-body{padding:12px}
