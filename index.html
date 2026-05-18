@@ -23,6 +23,37 @@
         <div class="spinner"></div>
     </div>
 
+    <!-- Promo Popup Modal -->
+    <div id="promo-modal" class="promo-modal">
+        <div class="promo-overlay"></div>
+        <div class="promo-card glass">
+            <button class="promo-close" id="promo-close" aria-label="Tutup">✕</button>
+            <div class="promo-content">
+                <div class="promo-icon">🎁</div>
+                <h2 class="promo-title" data-i18n="promo_title">Dapatkan Promo Sekarang</h2>
+                <p class="promo-desc" data-i18n="promo_desc">Hubungi kami via WhatsApp untuk penawaran eksklusif dan konsultasi gratis layanan otomasi industri Anda.</p>
+                
+                <form id="promo-form" class="promo-form">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="promo-name" 
+                            class="promo-input" 
+                            placeholder="Masukkan nama Anda" 
+                            data-i18n-ph="promo_name_ph"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="btn btn-primary promo-cta" data-i18n="promo_wa">💬 Chat WhatsApp Sekarang</button>
+                </form>
+                
+                <div class="promo-footer">
+                    <p class="promo-footer-text" data-i18n="promo_footer">Kami siap membantu Anda 24/7</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <header id="site-header" class="header transparent">
         <div class="wrap">

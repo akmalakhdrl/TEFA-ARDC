@@ -42,6 +42,57 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply saved language on load
   applyLanguage(currentLang);
 
+  // WhatsApp URL generator (used by multiple features)
+  const phone = '6281234567890';
+  const waUrl = (text) => `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+  // Promo Modal
+  const promoModal = document.getElementById('promo-modal');
+  const promoClose = document.getElementById('promo-close');
+  const promoOverlay = document.querySelector('.promo-overlay');
+  const promoForm = document.getElementById('promo-form');
+  const promoNameInput = document.getElementById('promo-name');
+
+  const showPromoModal = () => {
+    if (promoModal) {
+      promoModal.classList.add('active');
+      if (promoNameInput) promoNameInput.focus();
+    }
+  };
+
+  const closePromoModal = () => {
+    if (promoModal) {
+      promoModal.classList.remove('active');
+    }
+  };
+
+  // Close modal on X button
+  promoClose && promoClose.addEventListener('click', closePromoModal);
+  
+  // Close modal on overlay click
+  promoOverlay && promoOverlay.addEventListener('click', closePromoModal);
+
+  // Promo form submit
+  promoForm && promoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = promoNameInput.value.trim();
+    if (!name) return;
+    
+    const msg = `Halo, saya ${name}. Saya tertarik dengan promo dan konsultasi layanan otomasi industri ARDEC.`;
+    window.open(waUrl(msg), '_blank');
+    closePromoModal();
+    promoForm.reset();
+  });
+
+  // Show promo modal after 1.5 seconds (after loader disappears)
+  setTimeout(() => {
+    const modalShown = sessionStorage.getItem('ardc-promo-shown');
+    if (!modalShown) {
+      showPromoModal();
+      sessionStorage.setItem('ardc-promo-shown', 'true');
+    }
+  }, 1500);
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
@@ -112,8 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // WhatsApp CTA
   const wa = document.getElementById('whatsapp-cta');
   const waQuick = document.getElementById('whatsapp-quick');
-  const phone = '6281234567890';
-  const waUrl = (text) => `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
   wa && wa.addEventListener('click', (e) => { e.preventDefault(); window.open(waUrl('Halo ARDC, saya tertarik...'), '_blank'); });
   waQuick && waQuick.addEventListener('click', (e) => { e.preventDefault(); window.open(waUrl('Halo ARDC, saya ingin konsultasi...'), '_blank'); });
 
