@@ -235,78 +235,157 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Beranda Interactive Ad
-  const adThumbs = Array.from(document.querySelectorAll('.ad-thumb'));
-  const adImage = document.getElementById('ad-image');
-  const adName = document.getElementById('ad-name');
-  const adDesc = document.getElementById('ad-desc');
-  const adTag = document.getElementById('ad-tag');
-  const adSpecs = document.getElementById('ad-specs');
-  const adCta = document.getElementById('ad-cta');
-  const adPrev = document.getElementById('ad-prev');
-  const adNext = document.getElementById('ad-next');
-  let adIndex = 0;
-  let adTimer;
+  // Beranda Interactive Ad Carousel
+  const adCarouselTrack = document.getElementById('ad-carousel-track');
+  const adCarouselPrev = document.getElementById('ad-carousel-prev');
+  const adCarouselNext = document.getElementById('ad-carousel-next');
+  const adCarouselDots = document.getElementById('ad-carousel-dots');
 
-  const renderAd = (index) => {
-    if (!adThumbs.length) return;
-    const safeIndex = (index + adThumbs.length) % adThumbs.length;
-    const active = adThumbs[safeIndex];
-    adIndex = safeIndex;
-
-    adThumbs.forEach(t => t.classList.remove('active'));
-    active.classList.add('active');
-
-    if (adName) adName.textContent = active.dataset.name || '';
-    if (adDesc) adDesc.textContent = active.dataset.desc || '';
-    if (adTag) adTag.textContent = active.dataset.tag || '';
-    if (adImage && active.dataset.img) {
-      adImage.src = active.dataset.img;
-      adImage.alt = active.dataset.name || 'Produk ARDEC';
+  const adProducts = [
+    {
+      name: 'Wecon PI3070ig',
+      desc: 'HMI Touchscreen 7" dengan respon cepat dan tampilan jernih untuk lini produksi.',
+      tag: 'HMI',
+      img: 'assets/images/product_hmi.png',
+      wa: 'Halo, saya tertarik dengan produk Wecon PI3070ig HMI',
+      specs: [
+        { label: 'Layar', val: '7" TFT 800x480' },
+        { label: 'Komunikasi', val: 'Ethernet, RS232/485' },
+        { label: 'Memori', val: '128MB Flash' }
+      ]
+    },
+    {
+      name: 'Wecon PI3102ig',
+      desc: 'HMI 10.2" untuk monitoring multi-line dengan konektivitas industri lengkap.',
+      tag: 'HMI',
+      img: 'assets/images/product_hmi.png',
+      wa: 'Halo, saya tertarik dengan produk Wecon PI3102ig HMI',
+      specs: [
+        { label: 'Layar', val: '10.2" TFT 1024x600' },
+        { label: 'Komunikasi', val: 'Ethernet, RS232/485' },
+        { label: 'Memori', val: '256MB Flash' }
+      ]
+    },
+    {
+      name: 'Wecon LX3V-1412MR',
+      desc: 'PLC compact kompatibel Mitsubishi FX, cocok untuk otomasi mesin cepat.',
+      tag: 'PLC',
+      img: 'assets/images/product_plc.png',
+      wa: 'Halo, saya tertarik dengan produk Wecon LX3V-1412MR PLC',
+      specs: [
+        { label: 'I/O', val: '14 DI / 12 DO' },
+        { label: 'Komunikasi', val: 'RS232, RS485' },
+        { label: 'Program', val: '16K Steps' }
+      ]
+    },
+    {
+      name: 'Wecon VD100',
+      desc: 'VFD single phase 220V untuk kontrol kecepatan motor industri stabil.',
+      tag: 'VFD',
+      img: 'assets/images/product_vfd.png',
+      wa: 'Halo, saya tertarik dengan produk Wecon VD100 VFD',
+      specs: [
+        { label: 'Daya', val: '0.75 - 2.2 kW' },
+        { label: 'Input', val: 'Single phase 220V' },
+        { label: 'Proteksi', val: 'Overload' }
+      ]
     }
-    if (adCta && active.dataset.wa) {
-      adCta.dataset.wa = active.dataset.wa;
-    }
-    if (adSpecs) {
-      adSpecs.innerHTML = '';
-      const specs = (active.dataset.specs || '').split('|').filter(Boolean);
-      specs.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        adSpecs.appendChild(li);
-      });
-    }
-  };
+  ];
 
-  const startAdAuto = () => {
-    if (adTimer) clearInterval(adTimer);
-    adTimer = setInterval(() => renderAd(adIndex + 1), 6000);
-  };
+  const renderAdCarousel = () => {
+    if (!adCarouselTrack) return;
+    adCarouselTrack.innerHTML = '';
+    adCarouselDots.innerHTML = '';
 
-  if (adThumbs.length) {
-    renderAd(0);
-    startAdAuto();
-    adThumbs.forEach((thumb, idx) => {
-      thumb.addEventListener('click', () => {
-        renderAd(idx);
-        startAdAuto();
+    adProducts.forEach((prod, idx) => {
+      // Create slide
+      const slide = document.createElement('div');
+      slide.className = 'ad-carousel-slide';
+      const specsHtml = prod.specs.map(s => `<span class="ad-spec-item"><strong>${s.label}:</strong> ${s.val}</span>`).join('');
+      slide.innerHTML = `
+        <div class="ad-slide-content">
+          <h3 class="ad-slide-title">${prod.name}</h3>
+          <p class="ad-slide-desc">${prod.desc}</p>
+          <div class="ad-slide-specs">${specsHtml}</div>
+          <div class="ad-slide-actions">
+            <button class="btn btn-primary btn-sm ad-slide-cta" data-wa="${prod.wa}">💬 Tanyakan Harga</button>
+            <a href="#products" class="btn btn-ghost btn-sm">Lihat Detail</a>
+          </div>
+        </div>
+        <div class="ad-slide-visual">
+          <span class="ad-slide-tag">${prod.tag}</span>
+          <img src="${prod.img}" alt="${prod.name}" class="ad-slide-img">
+          <div class="ad-slide-name">${prod.name}</div>
+          <div class="ad-slide-note">Ready stock • Garansi resmi</div>
+        </div>
+      `;
+      adCarouselTrack.appendChild(slide);
+
+      // Create dot
+      const dot = document.createElement('button');
+      dot.className = `ad-carousel-dot ${idx === 0 ? 'active' : ''}`;
+      dot.addEventListener('click', () => scrollToSlide(idx));
+      adCarouselDots.appendChild(dot);
+
+      // CTA handler
+      slide.querySelector('.ad-slide-cta').addEventListener('click', (e) => {
+        e.preventDefault();
+        const msg = e.target.dataset.wa;
+        window.open(waUrl(msg), '_blank');
       });
     });
+  };
+
+  const scrollToSlide = (idx) => {
+    if (!adCarouselTrack) return;
+    const slide = adCarouselTrack.children[idx];
+    if (slide) {
+      slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      updateActiveDot(idx);
+    }
+  };
+
+  const updateActiveDot = (idx) => {
+    if (!adCarouselDots) return;
+    Array.from(adCarouselDots.children).forEach((dot, i) => {
+      dot.classList.toggle('active', i === idx);
+    });
+  };
+
+  let adCarouselTimer;
+  let adCurrentSlide = 0;
+
+  const startAdAutoScroll = () => {
+    if (adCarouselTimer) clearInterval(adCarouselTimer);
+    adCarouselTimer = setInterval(() => {
+      adCurrentSlide = (adCurrentSlide + 1) % adProducts.length;
+      scrollToSlide(adCurrentSlide);
+    }, 7000);
+  };
+
+  const setupAdCarouselNav = () => {
+    if (adCarouselPrev) {
+      adCarouselPrev.addEventListener('click', () => {
+        adCurrentSlide = (adCurrentSlide - 1 + adProducts.length) % adProducts.length;
+        scrollToSlide(adCurrentSlide);
+        startAdAutoScroll();
+      });
+    }
+    if (adCarouselNext) {
+      adCarouselNext.addEventListener('click', () => {
+        adCurrentSlide = (adCurrentSlide + 1) % adProducts.length;
+        scrollToSlide(adCurrentSlide);
+        startAdAutoScroll();
+      });
+    }
+  };
+
+  // Initialize carousel
+  if (adCarouselTrack) {
+    renderAdCarousel();
+    setupAdCarouselNav();
+    startAdAutoScroll();
   }
 
-  adPrev && adPrev.addEventListener('click', () => {
-    renderAd(adIndex - 1);
-    startAdAuto();
-  });
-  adNext && adNext.addEventListener('click', () => {
-    renderAd(adIndex + 1);
-    startAdAuto();
-  });
-
-  adCta && adCta.addEventListener('click', (e) => {
-    e.preventDefault();
-    const msg = adCta.dataset.wa || 'Halo, saya tertarik dengan produk Wecon';
-    window.open(waUrl(msg), '_blank');
-  });
 
 });
