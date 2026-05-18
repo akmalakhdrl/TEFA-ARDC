@@ -252,11 +252,43 @@
         <div id="partner-tooltip" class="partner-tooltip glass"></div>
     </section>
 
-    <!-- Produk Wecon -->
+    <!-- Produk -->
     <section id="products" class="section alt products-section">
         <div class="wrap">
-            <h3 class="section-title reveal" data-i18n="prod_title">Produk Wecon</h3>
-            <p class="products-subtitle reveal" data-i18n="prod_sub">Solusi otomasi industri terpercaya dari Wecon Indonesia</p>
+            <div class="brand-selector-wrap reveal">
+                <button id="brand-selector" class="brand-selector">
+                    <span id="brand-selector-label" data-i18n="prod_prefix">Produk</span>
+                    <span id="brand-selector-name" class="brand-sel-name">Wecon</span>
+                    <span class="brand-sel-arrow">▼</span>
+                </button>
+                <div id="brand-dropdown" class="brand-dropdown glass">
+                    <button class="brand-option active" data-brand="wecon">
+                        <img src="assets/icons/partners/wecon.svg" alt="Wecon" class="brand-opt-logo">
+                        <span>Wecon</span>
+                    </button>
+                    <button class="brand-option" data-brand="siemens">
+                        <img src="assets/icons/partners/siemens.svg" alt="Siemens" class="brand-opt-logo">
+                        <span>Siemens</span>
+                    </button>
+                    <button class="brand-option" data-brand="schneider">
+                        <img src="assets/icons/partners/schneider.svg" alt="Schneider" class="brand-opt-logo">
+                        <span>Schneider Electric</span>
+                    </button>
+                    <button class="brand-option" data-brand="omron">
+                        <img src="assets/icons/partners/omron.svg" alt="Omron" class="brand-opt-logo">
+                        <span>Omron</span>
+                    </button>
+                    <button class="brand-option" data-brand="delta">
+                        <img src="assets/icons/partners/delta.svg" alt="Delta" class="brand-opt-logo">
+                        <span>Delta Electronics</span>
+                    </button>
+                    <button class="brand-option" data-brand="mitsubishi">
+                        <img src="assets/icons/partners/mitsubishi.svg" alt="Mitsubishi" class="brand-opt-logo">
+                        <span>Mitsubishi Electric</span>
+                    </button>
+                </div>
+            </div>
+            <p class="products-subtitle reveal" id="prod-subtitle" data-i18n="prod_sub">Solusi otomasi industri terpercaya dari Wecon Indonesia</p>
 
             <!-- Category Filter Tabs -->
             <div class="product-tabs reveal">

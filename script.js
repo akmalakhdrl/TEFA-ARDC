@@ -138,6 +138,71 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  // Brand Selector Dropdown
+  const brandSelectorWrap = document.querySelector('.brand-selector-wrap');
+  const brandSelector = document.getElementById('brand-selector');
+  const brandDropdown = document.getElementById('brand-dropdown');
+  const brandOptions = document.querySelectorAll('.brand-option');
+  const brandNameEl = document.getElementById('brand-selector-name');
+  const prodSubtitle = document.getElementById('prod-subtitle');
+
+  if (brandSelector && brandDropdown) {
+    brandSelector.addEventListener('click', (e) => {
+      e.stopPropagation();
+      brandSelectorWrap.classList.toggle('open');
+    });
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+      brandSelectorWrap.classList.remove('open');
+    });
+    brandDropdown.addEventListener('click', (e) => e.stopPropagation());
+
+    brandOptions.forEach(opt => {
+      opt.addEventListener('click', () => {
+        const brand = opt.dataset.brand;
+        const brandName = opt.querySelector('span').textContent;
+        // Update active state
+        brandOptions.forEach(o => o.classList.remove('active'));
+        opt.classList.add('active');
+        // Update title
+        brandNameEl.textContent = brandName;
+        // Update subtitle
+        const lang = currentLang || 'id';
+        if (lang === 'id') {
+          prodSubtitle.textContent = `Solusi otomasi industri terpercaya dari ${brandName}`;
+        } else {
+          prodSubtitle.textContent = `Trusted industrial automation solutions from ${brandName}`;
+        }
+        // Close dropdown
+        brandSelectorWrap.classList.remove('open');
+        // Show/hide product cards based on brand (currently only wecon has products)
+        const allCards = document.querySelectorAll('.product-card');
+        if (brand === 'wecon') {
+          allCards.forEach(c => c.classList.remove('hidden'));
+          document.querySelector('.product-tabs').style.display = 'flex';
+        } else {
+          allCards.forEach(c => c.classList.add('hidden'));
+          document.querySelector('.product-tabs').style.display = 'none';
+          // Show coming soon message if not exists
+          let comingSoon = document.getElementById('coming-soon-msg');
+          if (!comingSoon) {
+            comingSoon = document.createElement('div');
+            comingSoon.id = 'coming-soon-msg';
+            comingSoon.className = 'coming-soon glass';
+            document.querySelector('.products-grid').before(comingSoon);
+          }
+          const csText = lang === 'id' ? 'Produk segera hadir' : 'Products coming soon';
+          comingSoon.innerHTML = `<p>🔜 ${csText} — <strong>${brandName}</strong></p>`;
+          comingSoon.style.display = 'block';
+        }
+        // Remove coming soon if wecon
+        if (brand === 'wecon') {
+          const cs = document.getElementById('coming-soon-msg');
+          if (cs) cs.style.display = 'none';
+        }
+      });
+    });
+  }
 
   // Product Filter Tabs
   const productTabs = document.querySelectorAll('.product-tab');
