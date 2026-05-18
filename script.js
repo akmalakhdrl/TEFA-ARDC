@@ -1,10 +1,47 @@
 // ARDC Company Profile - script.js
-// Handles: loader, smooth scroll, navbar on scroll, reveal animations, counters, simple parallax
+// Handles: loader, smooth scroll, navbar on scroll, reveal animations, counters, parallax, i18n
+
+let currentLang = localStorage.getItem('ardc-lang') || 'id';
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('ardc-lang', lang);
+  document.documentElement.lang = lang;
+  const dict = translations[lang];
+  if (!dict) return;
+  // Update text content
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  // Update placeholders
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.getAttribute('data-i18n-ph');
+    if (dict[key] !== undefined) el.placeholder = dict[key];
+  });
+  // Update toggle button
+  const toggle = document.getElementById('lang-toggle');
+  if (toggle) {
+    toggle.querySelector('.lang-flag').textContent = lang === 'id' ? '🇮🇩' : '🇬🇧';
+    toggle.querySelector('.lang-label').textContent = lang.toUpperCase();
+  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   // Loader
   const loader = document.getElementById('loader');
   setTimeout(() => { loader.style.display = 'none'; }, 700);
+
+  // Language toggle
+  const langToggle = document.getElementById('lang-toggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      const newLang = currentLang === 'id' ? 'en' : 'id';
+      applyLanguage(newLang);
+    });
+  }
+  // Apply saved language on load
+  applyLanguage(currentLang);
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {

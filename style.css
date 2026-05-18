@@ -54,6 +54,37 @@ svg.brand-icon.small{width:32px;height:32px}
 
 .mobile-toggle{display:none;background:transparent;border:0;color:var(--muted);font-size:20px}
 
+/* ---------- Language Toggle ---------- */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(8px);
+  color: #f0f5fb;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+.lang-toggle:hover {
+  border-color: rgba(0,229,255,0.4);
+  background: rgba(0,229,255,0.1);
+  box-shadow: 0 0 12px rgba(0,229,255,0.15);
+}
+.lang-flag {
+  font-size: 16px;
+  line-height: 1;
+}
+.lang-label {
+  text-transform: uppercase;
+}
+
 /* ---------- Hero ---------- */
 .hero{min-height:100vh;display:flex;align-items:center;padding:80px 0;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(3,6,12,0.45)), url('assets/icons/industrial-bg.svg');background-size:cover;background-position:center;opacity:.92;transform:translateZ(0);will-change:transform}

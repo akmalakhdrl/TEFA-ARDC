@@ -36,20 +36,24 @@
 
             <nav class="nav">
                 <ul>
-                    <li><a href="#hero">Beranda</a></li>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#services">Layanan</a></li>
-                    <li><a href="#products">Produk</a></li>
-                    <li><a href="#portfolio">Proyek</a></li>
-                    <li><a href="#advantages">Keunggulan</a></li>
-                    <li><a href="#stats">Statistik</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#hero" data-i18n="nav_beranda">Beranda</a></li>
+                    <li><a href="#about" data-i18n="nav_tentang">Tentang</a></li>
+                    <li><a href="#services" data-i18n="nav_layanan">Layanan</a></li>
+                    <li><a href="#products" data-i18n="nav_produk">Produk</a></li>
+                    <li><a href="#portfolio" data-i18n="nav_proyek">Proyek</a></li>
+                    <li><a href="#advantages" data-i18n="nav_keunggulan">Keunggulan</a></li>
+                    <li><a href="#stats" data-i18n="nav_statistik">Statistik</a></li>
+                    <li><a href="#contact" data-i18n="nav_kontak">Kontak</a></li>
                 </ul>
             </nav>
 
             <div class="ctas">
-                <a href="#contact" class="btn btn-outline">Kontak</a>
-                <a href="#portfolio" class="btn btn-primary">Lihat Proyek</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="nav_kontak">Kontak</a>
+                <a href="#portfolio" class="btn btn-primary" data-i18n="nav_proyek_btn">Lihat Proyek</a>
+                <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+                    <span class="lang-flag">🇮🇩</span>
+                    <span class="lang-label">ID</span>
+                </button>
             </div>
 
             <button id="mobile-toggle" class="mobile-toggle" aria-label="Open menu">☰</button>
@@ -61,13 +65,13 @@
         <div class="hero-bg" aria-hidden="true"></div>
         <div class="wrap hero-inner">
             <div class="hero-copy">
-                <h1 class="title">Otomasi Industri untuk Era <span class="accent">Smart Factory</span></h1>
-                <p class="lead">Solusi rekayasa, platform IoT, dan sistem otomasi turnkey untuk Industri 4.0 — dari
+                <h1 class="title" data-i18n="hero_title">Otomasi Industri untuk Era <span class="accent">Smart Factory</span></h1>
+                <p class="lead" data-i18n="hero_lead">Solusi rekayasa, platform IoT, dan sistem otomasi turnkey untuk Industri 4.0 — dari
                     konsep hingga commissioning.</p>
 
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Hubungi Kami</a>
-                    <a href="#portfolio" class="btn btn-ghost">Lihat Proyek</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero_cta">Hubungi Kami</a>
+                    <a href="#portfolio" class="btn btn-ghost" data-i18n="hero_proyek">Lihat Proyek</a>
                     <a href="#" id="whatsapp-cta" class="btn btn-floating">💬 WhatsApp</a>
                 </div>
             </div>
@@ -76,23 +80,23 @@
                 <!-- Glassmorphism cards with animated icons -->
                 <div class="card glass card-1 reveal">
                     <div class="icon"><img src="assets/icons/factory.svg" alt="pabrik"></div>
-                    <h4>Smart Factory</h4>
-                    <p>Garis produksi modular dengan telemetri real-time dan predictive maintenance.</p>
-                    <a class="link" href="#services">Pelajari Lebih Lanjut</a>
+                    <h4 data-i18n="card1_title">Smart Factory</h4>
+                    <p data-i18n="card1_desc">Garis produksi modular dengan telemetri real-time dan predictive maintenance.</p>
+                    <a class="link" href="#services" data-i18n="learn_more">Pelajari Lebih Lanjut</a>
                 </div>
 
                 <div class="card glass card-2 reveal">
                     <div class="icon"><img src="assets/icons/microchip.svg" alt="microchip"></div>
-                    <h4>IoT & Konektivitas</h4>
-                    <p>Manajemen perangkat yang aman dan platform IoT industri end-to-end.</p>
-                    <a class="link" href="#services">Pelajari Lebih Lanjut</a>
+                    <h4 data-i18n="card2_title">IoT & Konektivitas</h4>
+                    <p data-i18n="card2_desc">Manajemen perangkat yang aman dan platform IoT industri end-to-end.</p>
+                    <a class="link" href="#services" data-i18n="learn_more">Pelajari Lebih Lanjut</a>
                 </div>
 
                 <div class="card glass card-3 reveal">
                     <div class="icon"><img src="assets/icons/automation.svg" alt="automation"></div>
-                    <h4>Otomasi & Kontrol</h4>
-                    <p>Sistem PLC/HMI, integrasi robotika, dan solusi SCADA.</p>
-                    <a class="link" href="#services">Pelajari Lebih Lanjut</a>
+                    <h4 data-i18n="card3_title">Otomasi & Kontrol</h4>
+                    <p data-i18n="card3_desc">Sistem PLC/HMI, integrasi robotika, dan solusi SCADA.</p>
+                    <a class="link" href="#services" data-i18n="learn_more">Pelajari Lebih Lanjut</a>
                 </div>
             </div>
         </div>
@@ -103,16 +107,16 @@
         <div class="wrap section-inner">
             <div class="split">
                 <div class="text reveal">
-                    <h2>Tentang ARDEC</h2>
-                    <p>ARDEC adalah perusahaan rekayasa yang berfokus pada otomasi, platform IoT industri, dan
+                    <h2 data-i18n="about_title">Tentang ARDEC</h2>
+                    <p data-i18n="about_desc">ARDEC adalah perusahaan rekayasa yang berfokus pada otomasi, platform IoT industri, dan
                         transformasi smart factory. Kami memadukan rekayasa sistem dan data science untuk meningkatkan
                         ketersediaan dan produktivitas pabrik.</p>
                     <ul class="bullets">
-                        <li>Proyek otomasi turnkey</li>
-                        <li>IoT industri & analitik</li>
-                        <li>Engineering & integrasi kustom</li>
+                        <li data-i18n="about_b1">Proyek otomasi turnkey</li>
+                        <li data-i18n="about_b2">IoT industri & analitik</li>
+                        <li data-i18n="about_b3">Engineering & integrasi kustom</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Pelajari Lebih Lanjut</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="learn_more">Pelajari Lebih Lanjut</a>
                 </div>
                 <div class="media reveal">
                     <div class="media-img glass">
@@ -127,8 +131,8 @@
     <!-- Brand Partners -->
     <section id="partners" class="section partners-section">
         <div class="wrap">
-            <h3 class="section-title reveal">Brand Partner</h3>
-            <p class="partners-subtitle reveal">Dipercaya oleh brand otomasi industri terkemuka</p>
+            <h3 class="section-title reveal" data-i18n="partner_title">Brand Partner</h3>
+            <p class="partners-subtitle reveal" data-i18n="partner_sub">Dipercaya oleh brand otomasi industri terkemuka</p>
         </div>
         <div class="marquee-wrapper reveal">
             <div class="marquee-track">
@@ -251,12 +255,12 @@
     <!-- Produk Wecon -->
     <section id="products" class="section alt products-section">
         <div class="wrap">
-            <h3 class="section-title reveal">Produk Wecon</h3>
-            <p class="products-subtitle reveal">Solusi otomasi industri terpercaya dari Wecon Indonesia</p>
+            <h3 class="section-title reveal" data-i18n="prod_title">Produk Wecon</h3>
+            <p class="products-subtitle reveal" data-i18n="prod_sub">Solusi otomasi industri terpercaya dari Wecon Indonesia</p>
 
             <!-- Category Filter Tabs -->
             <div class="product-tabs reveal">
-                <button class="product-tab active" data-filter="all">Semua</button>
+                <button class="product-tab active" data-filter="all" data-i18n="tab_all">Semua</button>
                 <button class="product-tab" data-filter="hmi">HMI</button>
                 <button class="product-tab" data-filter="plc">PLC</button>
                 <button class="product-tab" data-filter="vfd">VFD</button>
@@ -375,31 +379,31 @@
     <!-- Specializations (Spesialisasi Kami) -->
     <section id="specializations" class="section specializations-section">
         <div class="wrap">
-            <h3 class="section-title reveal">Spesialisasi Kami</h3>
+            <h3 class="section-title reveal" data-i18n="spec_title">Spesialisasi Kami</h3>
             <div class="grid specializations-grid">
                 <!-- Card 1: Educational Trainer Kits -->
                 <div class="spec-card glass reveal spec-glow-blue">
                     <div class="spec-icon-wrapper">
                         <img src="assets/icons/microchip.svg" alt="Microchip Icon" class="spec-icon">
                     </div>
-                    <h4>Educational Trainer Kits</h4>
-                    <p>Riset, perancangan, dan fabrikasi modul praktikum (trainer kit) berbasis <em>cyber-physical systems</em> berpresisi tinggi untuk instrumentasi PLC, mikrokontroler, serta sistem kontrol elektro-pneumatik guna memenuhi standarisasi kompetensi pedagogis dan kebutuhan riset terapan.</p>
+                    <h4 data-i18n="spec1_title">Educational Trainer Kits</h4>
+                    <p data-i18n="spec1_desc">Riset, perancangan, dan fabrikasi modul praktikum (trainer kit) berbasis <em>cyber-physical systems</em> berpresisi tinggi untuk instrumentasi PLC, mikrokontroler, serta sistem kontrol elektro-pneumatik guna memenuhi standarisasi kompetensi pedagogis dan kebutuhan riset terapan.</p>
                 </div>
                 <!-- Card 2: Automation & Custom HMI -->
                 <div class="spec-card glass reveal">
                     <div class="spec-icon-wrapper">
                         <img src="assets/icons/automation.svg" alt="Automation Icon" class="spec-icon">
                     </div>
-                    <h4>Automation & Custom HMI</h4>
-                    <p>Sintesis arsitektur otomasi industri terintegrasi dan pengembangan antarmuka interaktif <em>Human-Machine Interface</em> (HMI/GUI) berbasis transmisi telemetri data serial <em>real-time</em> untuk optimalisasi monitoring serta kendali deterministik perangkat keras.</p>
+                    <h4 data-i18n="spec2_title">Automation & Custom HMI</h4>
+                    <p data-i18n="spec2_desc">Sintesis arsitektur otomasi industri terintegrasi dan pengembangan antarmuka interaktif <em>Human-Machine Interface</em> (HMI/GUI) berbasis transmisi telemetri data serial <em>real-time</em> untuk optimalisasi monitoring serta kendali deterministik perangkat keras.</p>
                 </div>
                 <!-- Card 3: Professional Training -->
                 <div class="spec-card glass reveal">
                     <div class="spec-icon-wrapper">
                         <img src="assets/icons/gear.svg" alt="Gears Icon" class="spec-icon">
                     </div>
-                    <h4>Professional Training</h4>
-                    <p>Transfer teknologi melalui program pelatihan intensif, sertifikasi kompetensi, dan <em>workshop</em> aplikatif mengenai integrasi mikrokontroler, instrumentasi PLC industri, serta pemodelan ekosistem <em>embedded systems</em> terapan bagi akademisi dan praktisi.</p>
+                    <h4 data-i18n="spec3_title">Professional Training</h4>
+                    <p data-i18n="spec3_desc">Transfer teknologi melalui program pelatihan intensif, sertifikasi kompetensi, dan <em>workshop</em> aplikatif mengenai integrasi mikrokontroler, instrumentasi PLC industri, serta pemodelan ekosistem <em>embedded systems</em> terapan bagi akademisi dan praktisi.</p>
                 </div>
             </div>
         </div>
@@ -408,27 +412,27 @@
     <!-- Services -->
     <section id="services" class="section alt">
         <div class="wrap">
-            <h3 class="section-title reveal">Layanan Kami</h3>
+            <h3 class="section-title reveal" data-i18n="svc_title">Layanan Kami</h3>
             <div class="grid services-grid">
                 <div class="service card glass reveal">
                     <div class="s-icon"><img src="assets/icons/gear.svg" alt="gear"></div>
-                    <h4>Rekayasa Sistem</h4>
-                    <p>Analisis kebutuhan, desain sistem, dan validasi.</p>
+                    <h4 data-i18n="svc1_t">Rekayasa Sistem</h4>
+                    <p data-i18n="svc1_d">Analisis kebutuhan, desain sistem, dan validasi.</p>
                 </div>
                 <div class="service card glass reveal">
                     <div class="s-icon"><img src="assets/icons/automation.svg" alt="automation"></div>
-                    <h4>Kontrol & PLC</h4>
-                    <p>Sistem kontrol handal sesuai standar IEC-61131.</p>
+                    <h4 data-i18n="svc2_t">Kontrol & PLC</h4>
+                    <p data-i18n="svc2_d">Sistem kontrol handal sesuai standar IEC-61131.</p>
                 </div>
                 <div class="service card glass reveal">
                     <div class="s-icon"><img src="assets/icons/microchip.svg" alt="microchip"></div>
-                    <h4>IoT & Edge</h4>
-                    <p>Gateway edge, telemetri, dan integrasi ke cloud.</p>
+                    <h4 data-i18n="svc3_t">IoT & Edge</h4>
+                    <p data-i18n="svc3_d">Gateway edge, telemetri, dan integrasi ke cloud.</p>
                 </div>
                 <div class="service card glass reveal">
                     <div class="s-icon"><img src="assets/icons/factory.svg" alt="factory"></div>
-                    <h4>Digital Twin</h4>
-                    <p>Simulasi dan visualisasi untuk optimasi proses.</p>
+                    <h4 data-i18n="svc4_t">Digital Twin</h4>
+                    <p data-i18n="svc4_d">Simulasi dan visualisasi untuk optimasi proses.</p>
                 </div>
             </div>
         </div>
@@ -437,7 +441,7 @@
     <!-- Portfolio -->
     <section id="portfolio" class="section">
         <div class="wrap">
-            <h3 class="section-title reveal">Proyek Terpilih</h3>
+            <h3 class="section-title reveal" data-i18n="port_title">Proyek Terpilih</h3>
             <div class="grid portfolio-grid">
                 <article class="project card glass reveal animated-card project-with-gallery">
                     <div class="project-media">
@@ -446,9 +450,9 @@
                         <div class="proj-badge">Training PLC</div>
                     </div>
                     <div class="project-body">
-                        <h4>Training Company Berbasis Sistem PLC</h4>
-                        <p>Program sertifikasi dan pelatihan praktis otomasi industri berbasis sistem PLC modern.</p>
-                        <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
+                        <h4 data-i18n="proj1_t">Training Company Berbasis Sistem PLC</h4>
+                        <p data-i18n="proj1_d">Program sertifikasi dan pelatihan praktis otomasi industri berbasis sistem PLC modern.</p>
+                        <a class="btn btn-ghost small" href="#" data-i18n="view_project">Lihat Proyek</a>
                     </div>
                 </article>
 
@@ -459,9 +463,9 @@
                         <div class="proj-badge">Lini Produksi</div>
                     </div>
                     <div class="project-body">
-                        <h4>Garis Pengemasan Otomatis</h4>
-                        <p>Integrasi vision, robotika, dan kontrol PLC untuk operasi 24/7 secara mandiri dan presisi.</p>
-                        <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
+                        <h4 data-i18n="proj2_t">Garis Pengemasan Otomatis</h4>
+                        <p data-i18n="proj2_d">Integrasi vision, robotika, dan kontrol PLC untuk operasi 24/7 secara mandiri dan presisi.</p>
+                        <a class="btn btn-ghost small" href="#" data-i18n="view_project">Lihat Proyek</a>
                     </div>
                 </article>
 
@@ -472,9 +476,9 @@
                         <div class="proj-badge">Monitoring IoT</div>
                     </div>
                     <div class="project-body">
-                        <h4>Platform Monitoring Cerdas</h4>
-                        <p>Sistem visualisasi IoT industri dengan analitik prediktif berbasis komputasi edge dan cloud dashboard.</p>
-                        <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
+                        <h4 data-i18n="proj3_t">Platform Monitoring Cerdas</h4>
+                        <p data-i18n="proj3_d">Sistem visualisasi IoT industri dengan analitik prediktif berbasis komputasi edge dan cloud dashboard.</p>
+                        <a class="btn btn-ghost small" href="#" data-i18n="view_project">Lihat Proyek</a>
                     </div>
                 </article>
 
@@ -485,9 +489,9 @@
                         <div class="proj-badge">Retrofitting</div>
                     </div>
                     <div class="project-body">
-                        <h4>Modernisasi Retrofit Line</h4>
-                        <p>Migrasi sistem kontrol mesin konvensional dan PLC legacy ke arsitektur kontrol modern terintegrasi.</p>
-                        <a class="btn btn-ghost small" href="#">Lihat Proyek</a>
+                        <h4 data-i18n="proj4_t">Modernisasi Retrofit Line</h4>
+                        <p data-i18n="proj4_d">Migrasi sistem kontrol mesin konvensional dan PLC legacy ke arsitektur kontrol modern terintegrasi.</p>
+                        <a class="btn btn-ghost small" href="#" data-i18n="view_project">Lihat Proyek</a>
                     </div>
                 </article>
             </div>
@@ -497,19 +501,19 @@
     <!-- Advantages -->
     <section id="advantages" class="section alt">
         <div class="wrap">
-            <h3 class="section-title reveal">Keunggulan Kami</h3>
+            <h3 class="section-title reveal" data-i18n="adv_title">Keunggulan Kami</h3>
             <div class="grid advantages-grid">
                 <div class="adv card glass reveal">
-                    <h4>Keunggulan Rekayasa</h4>
-                    <p>Tim multidisiplin dengan pengalaman mendalam.</p>
+                    <h4 data-i18n="adv1_t">Keunggulan Rekayasa</h4>
+                    <p data-i18n="adv1_d">Tim multidisiplin dengan pengalaman mendalam.</p>
                 </div>
                 <div class="adv card glass reveal">
-                    <h4>Kecepatan Implementasi</h4>
-                    <p>Waktu ke nilai yang cepat dengan solusi modular.</p>
+                    <h4 data-i18n="adv2_t">Kecepatan Implementasi</h4>
+                    <p data-i18n="adv2_d">Waktu ke nilai yang cepat dengan solusi modular.</p>
                 </div>
                 <div class="adv card glass reveal">
-                    <h4>Berbasis Data</h4>
-                    <p>Pendekatan analytics-first untuk perbaikan berkelanjutan.</p>
+                    <h4 data-i18n="adv3_t">Berbasis Data</h4>
+                    <p data-i18n="adv3_d">Pendekatan analytics-first untuk perbaikan berkelanjutan.</p>
                 </div>
             </div>
         </div>
@@ -518,19 +522,19 @@
     <!-- Statistics -->
     <section id="stats" class="section stats">
         <div class="wrap">
-            <h3 class="section-title reveal">Dampak Kami</h3>
+            <h3 class="section-title reveal" data-i18n="stat_title">Dampak Kami</h3>
             <div class="grid stats-grid">
                 <div class="stat card glass reveal">
                     <div class="num" data-target="128">0</div>
-                    <div class="label">Proyek Terselesaikan</div>
+                    <div class="label" data-i18n="stat1">Proyek Terselesaikan</div>
                 </div>
                 <div class="stat card glass reveal">
                     <div class="num" data-target="75">0</div>
-                    <div class="label">Klien</div>
+                    <div class="label" data-i18n="stat2">Klien</div>
                 </div>
                 <div class="stat card glass reveal">
                     <div class="num" data-target="250">0</div>
-                    <div class="label">Sensor Terpasang</div>
+                    <div class="label" data-i18n="stat3">Sensor Terpasang</div>
                 </div>
                 <div class="stat card glass reveal">
                     <div class="num" data-target="99">0</div>
@@ -545,22 +549,22 @@
         <div class="wrap">
             <div class="split contact-inner">
                 <div class="contact-form card glass reveal">
-                    <h3>Kontak</h3>
-                    <p>Mulai transformasi digital Anda hari ini.</p>
+                    <h3 data-i18n="ct_title">Kontak</h3>
+                    <p data-i18n="ct_sub">Mulai transformasi digital Anda hari ini.</p>
                     <form id="contactForm">
-                        <input type="text" name="name" placeholder="Nama Anda" required>
+                        <input type="text" name="name" data-i18n-ph="ct_name" placeholder="Nama Anda" required>
                         <input type="email" name="email" placeholder="Email" required>
-                        <textarea name="message" placeholder="Pesan" rows="4" required></textarea>
+                        <textarea name="message" data-i18n-ph="ct_msg" placeholder="Pesan" rows="4" required></textarea>
                         <div class="form-actions">
-                            <button class="btn btn-primary" type="submit">Kirim Pesan</button>
+                            <button class="btn btn-primary" type="submit" data-i18n="ct_send">Kirim Pesan</button>
                             <a href="#" id="whatsapp-quick" class="btn btn-ghost">Chat WhatsApp</a>
                         </div>
                     </form>
                 </div>
 
                 <div class="contact-info reveal">
-                    <h4>Lokasi Kantor</h4>
-                    <p>Gedung TEFA Lantai 3, Semarang</p>
+                    <h4 data-i18n="ct_loc">Lokasi Kantor</h4>
+                    <p data-i18n="ct_addr">Gedung TEFA Lantai 3, Semarang</p>
                     <ul class="contact-list">
                         <li>📞 +62 812-3456-7890</li>
                         <li>✉️ info@ardcenter.id</li>
@@ -586,15 +590,16 @@
                 </div>
             </div>
             <div class="foot-links">
-                <a href="#about">Tentang</a>
-                <a href="#services">Layanan</a>
-                <a href="#contact">Kontak</a>
+                <a href="#about" data-i18n="nav_tentang">Tentang</a>
+                <a href="#services" data-i18n="nav_layanan">Layanan</a>
+                <a href="#contact" data-i18n="nav_kontak">Kontak</a>
             </div>
             <div class="copyright">© 2026 ARDEC. All rights reserved.</div>
         </div>
     </footer>
 
-    <script src="script.js?v=20260517"></script>
+    <script src="i18n.js?v=20260518"></script>
+    <script src="script.js?v=20260518"></script>
 </body>
 
 </html>
