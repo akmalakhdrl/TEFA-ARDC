@@ -496,7 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapContainer = document.getElementById('mapContainer');
   if (mapContainer) {
     mapContainer.addEventListener('click', () => {
-      window.open('https://maps.app.goo.gl/JDToyLaqZmQnsZYf7', '_blank');
+      window.open('https://maps.google.com/?q=WCXM+JW', '_blank');
     });
   }
 
