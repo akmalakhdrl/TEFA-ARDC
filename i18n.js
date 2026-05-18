@@ -2,7 +2,7 @@
 const translations = {
   id: {
     nav_beranda: 'Beranda', nav_tentang: 'Tentang', nav_layanan: 'Layanan', nav_produk: 'Produk',
-    nav_proyek: 'Proyek', nav_keunggulan: 'Keunggulan', nav_statistik: 'Statistik', nav_kontak: 'Kontak',
+    nav_training: 'Training', nav_proyek: 'Proyek', nav_keunggulan: 'Keunggulan', nav_statistik: 'Statistik', nav_kontak: 'Kontak',
     nav_proyek_btn: 'Lihat Proyek',
     promo_title: 'Dapatkan Promo Sekarang',
     promo_desc: 'Hubungi kami via WhatsApp untuk penawaran eksklusif dan konsultasi gratis layanan otomasi industri Anda.',
@@ -64,7 +64,7 @@ const translations = {
   },
   en: {
     nav_beranda: 'Home', nav_tentang: 'About', nav_layanan: 'Services', nav_produk: 'Products',
-    nav_proyek: 'Projects', nav_keunggulan: 'Advantages', nav_statistik: 'Statistics', nav_kontak: 'Contact',
+    nav_training: 'Training', nav_proyek: 'Projects', nav_keunggulan: 'Advantages', nav_statistik: 'Statistics', nav_kontak: 'Contact',
     nav_proyek_btn: 'View Projects',
     promo_title: 'Get Promo Now',
     promo_desc: 'Contact us via WhatsApp for exclusive offers and free consultation on your industrial automation needs.',
