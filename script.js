@@ -19,10 +19,9 @@ function applyLanguage(lang) {
     const key = el.getAttribute('data-i18n-ph');
     if (dict[key] !== undefined) el.placeholder = dict[key];
   });
-  // Update toggle button
+  // Update toggle button label
   const toggle = document.getElementById('lang-toggle');
   if (toggle) {
-    toggle.querySelector('.lang-flag').textContent = lang === 'id' ? '🇮🇩' : '🇬🇧';
     toggle.querySelector('.lang-label').textContent = lang.toUpperCase();
   }
 }

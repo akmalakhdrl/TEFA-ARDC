@@ -77,9 +77,14 @@ svg.brand-icon.small{width:32px;height:32px}
   background: rgba(0,229,255,0.1);
   box-shadow: 0 0 12px rgba(0,229,255,0.15);
 }
-.lang-flag {
-  font-size: 16px;
-  line-height: 1;
+.lang-globe {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.lang-toggle:hover .lang-globe {
+  color: var(--accent);
 }
 .lang-label {
   text-transform: uppercase;
