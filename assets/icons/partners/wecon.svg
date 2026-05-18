@@ -1,8 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60">
-  <!-- Wecon Indonesia Logo -->
-  <rect x="2" y="8" width="4" height="44" rx="2" fill="#00b8a9"/>
-  <rect x="9" y="8" width="4" height="44" rx="2" fill="#00b8a9"/>
-  <path d="M18 14 L28 46 L38 24 L48 46 L58 14" fill="none" stroke="#e0e8f0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="64" y="36" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#e0e8f0" letter-spacing="1">econ</text>
-  <text x="18" y="56" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="400" fill="#00b8a9" letter-spacing="2">INDONESIA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 768" role="img" aria-label="Wecon logo">
+  <polygon points="384,84 500,270 384,456 268,270" fill="#ff0000"/>
+  <polygon points="384,456 244,456 136,640 276,640" fill="#ff0000" opacity="0.92"/>
+  <polygon points="384,456 492,640 632,640 524,456" fill="#ff0000" opacity="0.92"/>
+  <polygon points="384,196 430,270 384,344 338,270" fill="#c40000" opacity="0.9"/>
 </svg>
