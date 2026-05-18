@@ -2,7 +2,7 @@
 const translations = {
   id: {
     nav_beranda: 'Beranda', nav_tentang: 'Tentang', nav_layanan: 'Layanan', nav_produk: 'Produk',
-    nav_proyek: 'Proyek', nav_keunggulan: 'Keunggulan', nav_statistik: 'Statistik', nav_kontak: 'Kontak',
+    nav_proyek: 'Proyek', nav_keunggulan: 'Keunggulan', nav_statistik: 'Statistik', nav_lokasi: 'Lokasi', nav_kontak: 'Kontak',
     nav_proyek_btn: 'Lihat Proyek',
     promo_title: 'Dapatkan Promo Sekarang',
     promo_desc: 'Hubungi kami via WhatsApp untuk penawaran eksklusif dan konsultasi gratis layanan otomasi industri Anda.',
@@ -50,12 +50,21 @@ const translations = {
     ct_title: 'Kontak', ct_sub: 'Mulai transformasi digital Anda hari ini.',
     ct_name: 'Nama Anda', ct_msg: 'Pesan', ct_send: 'Kirim Pesan',
     ct_loc: 'Lokasi Kantor', ct_addr: 'Gedung TEFA Lantai 3, Semarang',
+    lokasi_title: '📍 Lokasi Kami',
+    lokasi_subtitle: 'Teaching Factory Sekolah Vokasi Undip',
+    lokasi_heading: 'Temukan Kami',
+    lokasi_address_label: 'Alamat',
+    lokasi_phone_label: 'Telepon',
+    lokasi_email_label: 'Email',
+    lokasi_coords_label: 'Koordinat',
+    lokasi_btn: '🗺️ Buka di Google Maps',
+    lokasi_btn_nav: '📱 Navigasi',
     footer_desc: 'Solusi otomasi industri, smart factory, dan IoT terpercaya untuk transformasi digital perusahaan Anda.',
     footer_nav: 'Navigasi'
   },
   en: {
     nav_beranda: 'Home', nav_tentang: 'About', nav_layanan: 'Services', nav_produk: 'Products',
-    nav_proyek: 'Projects', nav_keunggulan: 'Advantages', nav_statistik: 'Statistics', nav_kontak: 'Contact',
+    nav_proyek: 'Projects', nav_keunggulan: 'Advantages', nav_statistik: 'Statistics', nav_lokasi: 'Location', nav_kontak: 'Contact',
     nav_proyek_btn: 'View Projects',
     promo_title: 'Get Promo Now',
     promo_desc: 'Contact us via WhatsApp for exclusive offers and free consultation on your industrial automation needs.',
@@ -103,6 +112,15 @@ const translations = {
     ct_title: 'Contact', ct_sub: 'Start your digital transformation today.',
     ct_name: 'Your Name', ct_msg: 'Message', ct_send: 'Send Message',
     ct_loc: 'Office Location', ct_addr: 'TEFA Building 3rd Floor, Semarang',
+    lokasi_title: '📍 Our Location',
+    lokasi_subtitle: 'Teaching Factory Sekolah Vokasi Undip',
+    lokasi_heading: 'Find Us',
+    lokasi_address_label: 'Address',
+    lokasi_phone_label: 'Phone',
+    lokasi_email_label: 'Email',
+    lokasi_coords_label: 'Coordinates',
+    lokasi_btn: '🗺️ Open in Google Maps',
+    lokasi_btn_nav: '📱 Navigate',
     footer_desc: 'Trusted industrial automation, smart factory, and IoT solutions for your digital transformation.',
     footer_nav: 'Navigation'
   }
