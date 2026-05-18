@@ -13,8 +13,8 @@ data = img.getdata()
 # Create new data list with transparent background
 new_data = []
 for item in data:
-    # If pixel is white (or very close to white), make it transparent
-    if item[0] > 240 and item[1] > 240 and item[2] > 240:
+    # If pixel is black (or very close to black), make it transparent
+    if item[0] < 50 and item[1] < 50 and item[2] < 50:
         new_data.append((255, 255, 255, 0))
     else:
         new_data.append(item)
