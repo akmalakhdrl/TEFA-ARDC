@@ -235,4 +235,78 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Beranda Interactive Ad
+  const adThumbs = Array.from(document.querySelectorAll('.ad-thumb'));
+  const adImage = document.getElementById('ad-image');
+  const adName = document.getElementById('ad-name');
+  const adDesc = document.getElementById('ad-desc');
+  const adTag = document.getElementById('ad-tag');
+  const adSpecs = document.getElementById('ad-specs');
+  const adCta = document.getElementById('ad-cta');
+  const adPrev = document.getElementById('ad-prev');
+  const adNext = document.getElementById('ad-next');
+  let adIndex = 0;
+  let adTimer;
+
+  const renderAd = (index) => {
+    if (!adThumbs.length) return;
+    const safeIndex = (index + adThumbs.length) % adThumbs.length;
+    const active = adThumbs[safeIndex];
+    adIndex = safeIndex;
+
+    adThumbs.forEach(t => t.classList.remove('active'));
+    active.classList.add('active');
+
+    if (adName) adName.textContent = active.dataset.name || '';
+    if (adDesc) adDesc.textContent = active.dataset.desc || '';
+    if (adTag) adTag.textContent = active.dataset.tag || '';
+    if (adImage && active.dataset.img) {
+      adImage.src = active.dataset.img;
+      adImage.alt = active.dataset.name || 'Produk ARDEC';
+    }
+    if (adCta && active.dataset.wa) {
+      adCta.dataset.wa = active.dataset.wa;
+    }
+    if (adSpecs) {
+      adSpecs.innerHTML = '';
+      const specs = (active.dataset.specs || '').split('|').filter(Boolean);
+      specs.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        adSpecs.appendChild(li);
+      });
+    }
+  };
+
+  const startAdAuto = () => {
+    if (adTimer) clearInterval(adTimer);
+    adTimer = setInterval(() => renderAd(adIndex + 1), 6000);
+  };
+
+  if (adThumbs.length) {
+    renderAd(0);
+    startAdAuto();
+    adThumbs.forEach((thumb, idx) => {
+      thumb.addEventListener('click', () => {
+        renderAd(idx);
+        startAdAuto();
+      });
+    });
+  }
+
+  adPrev && adPrev.addEventListener('click', () => {
+    renderAd(adIndex - 1);
+    startAdAuto();
+  });
+  adNext && adNext.addEventListener('click', () => {
+    renderAd(adIndex + 1);
+    startAdAuto();
+  });
+
+  adCta && adCta.addEventListener('click', (e) => {
+    e.preventDefault();
+    const msg = adCta.dataset.wa || 'Halo, saya tertarik dengan produk Wecon';
+    window.open(waUrl(msg), '_blank');
+  });
+
 });
