@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-label="Wecon logo">
+  <!-- White background -->
+  <rect width="1200" height="400" fill="#ffffff"/>
   <!-- Black vertical bar -->
   <rect x="40" y="80" width="50" height="240" fill="#1a1a1a" rx="8"/>
   <!-- Teal slash -->
