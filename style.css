@@ -819,8 +819,9 @@ svg.brand-icon.small{width:32px;height:32px}
   .contact-inner{grid-template-columns:1fr}
   .header.scrolled{margin:6px 14px}
   .nav ul{display:none}
-  .mobile-toggle{display:block;margin-left:auto}
+  .mobile-toggle{display:block}
   .ctas{display:none}
+  .lang-toggle{margin-left:auto}
 }
 
 @media (max-width:520px){
