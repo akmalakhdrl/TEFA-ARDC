@@ -492,5 +492,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setupAdCarouselNav();
   }
 
+  // Maps click handler
+  const mapContainer = document.getElementById('mapContainer');
+  if (mapContainer) {
+    mapContainer.addEventListener('click', () => {
+      window.open('https://maps.app.goo.gl/JDToyLaqZmQnsZYf7', '_blank');
+    });
+  }
 
 });

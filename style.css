@@ -418,7 +418,8 @@ svg.brand-icon.small{width:32px;height:32px}
 .contact-inner{display:grid;grid-template-columns:1fr 360px;gap:30px}
 .contact-form input, .contact-form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-bottom:12px}
 .form-actions{display:flex;gap:12px;align-items:center}
-.contact-info .contact-map{height:160px;margin-top:18px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.contact-info .contact-map{height:300px;margin-top:18px;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.contact-info .contact-map:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.25)}
 
 /* ---------- Footer ---------- */
 .footer{padding:0;background:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(13,22,40,0.3));border-top:1px solid rgba(255,255,255,0.06)}
@@ -1427,4 +1428,5 @@ svg.brand-icon.small{width:32px;height:32px}
 @media (max-width:520px){
   .title{font-size:24px}
   .brand-tag{display:none}
+  .contact-info .contact-map{height:250px}
 }
