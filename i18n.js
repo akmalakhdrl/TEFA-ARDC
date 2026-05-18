@@ -44,7 +44,9 @@ const translations = {
     stat_title: 'Dampak Kami', stat1: 'Proyek Terselesaikan', stat2: 'Klien', stat3: 'Sensor Terpasang',
     ct_title: 'Kontak', ct_sub: 'Mulai transformasi digital Anda hari ini.',
     ct_name: 'Nama Anda', ct_msg: 'Pesan', ct_send: 'Kirim Pesan',
-    ct_loc: 'Lokasi Kantor', ct_addr: 'Gedung TEFA Lantai 3, Semarang'
+    ct_loc: 'Lokasi Kantor', ct_addr: 'Gedung TEFA Lantai 3, Semarang',
+    footer_desc: 'Solusi otomasi industri, smart factory, dan IoT terpercaya untuk transformasi digital perusahaan Anda.',
+    footer_nav: 'Navigasi'
   },
   en: {
     nav_beranda: 'Home', nav_tentang: 'About', nav_layanan: 'Services', nav_produk: 'Products',
@@ -90,6 +92,8 @@ const translations = {
     stat_title: 'Our Impact', stat1: 'Projects Completed', stat2: 'Clients', stat3: 'Sensors Deployed',
     ct_title: 'Contact', ct_sub: 'Start your digital transformation today.',
     ct_name: 'Your Name', ct_msg: 'Message', ct_send: 'Send Message',
-    ct_loc: 'Office Location', ct_addr: 'TEFA Building 3rd Floor, Semarang'
+    ct_loc: 'Office Location', ct_addr: 'TEFA Building 3rd Floor, Semarang',
+    footer_desc: 'Trusted industrial automation, smart factory, and IoT solutions for your digital transformation.',
+    footer_nav: 'Navigation'
   }
 };

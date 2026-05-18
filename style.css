@@ -226,15 +226,24 @@ svg.brand-icon.small{width:32px;height:32px}
 .contact-info .contact-map{height:160px;margin-top:18px;border-radius:10px;display:flex;align-items:center;justify-content:center}
 
 /* ---------- Footer ---------- */
-.footer{padding:38px 0;background:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(13,22,40,0.3));border-top:1px solid rgba(255,255,255,0.06)}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand-legal{display:flex;gap:12px;align-items:center}
-.brand-legal strong{color:#f0f5fb}
-.brand-legal .muted{color:#b8c4d4}
+.footer{padding:0;background:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(13,22,40,0.3));border-top:1px solid rgba(255,255,255,0.06)}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding:48px 0 36px}
+.footer-brand{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.footer-brand strong{color:#f0f5fb;font-size:18px}
+.footer-brand .muted{color:#8a96a6;font-size:11px}
 .brand-icon.small{width:32px;height:32px}
-.foot-links a{color:#b8c4d4;margin-right:12px;text-decoration:none;transition:var(--transition)}
-.foot-links a:hover{color:var(--accent)}
-.copyright{color:#8a96a6}
+.footer-desc{font-size:13px;line-height:1.6;margin:0 0 18px}
+.footer-heading{color:#f0f5fb;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;margin:0 0 16px;font-weight:700}
+.footer-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.footer-list li{font-size:13px;color:#8a96a6}
+.footer-list a{color:#8a96a6;text-decoration:none;transition:var(--transition)}
+.footer-list a:hover{color:var(--accent)}
+.social-links{display:flex;gap:10px}
+.social-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:#8a96a6;transition:var(--transition);text-decoration:none}
+.social-icon svg{width:16px;height:16px}
+.social-icon:hover{color:var(--accent);border-color:rgba(0,229,255,0.4);background:rgba(0,229,255,0.08);box-shadow:0 0 12px rgba(0,229,255,0.15);transform:translateY(-2px)}
+.footer-bottom{padding:20px 0;border-top:1px solid rgba(255,255,255,0.06);text-align:center}
+.copyright{color:#8a96a6;font-size:13px}
 
 /* ---------- Reveal animations ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
@@ -963,6 +972,7 @@ svg.brand-icon.small{width:32px;height:32px}
   .mobile-toggle{display:block}
   .ctas{display:none}
   .lang-toggle{margin-left:auto}
+  .footer-top{grid-template-columns:1fr;gap:28px}
 }
 
 @media (max-width:520px){
