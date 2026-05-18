@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60">
+  <!-- Three diamond logo -->
+  <polygon points="24,10 36,30 24,50 12,30" fill="#e60012"/>
+  <polygon points="38,20 50,40 38,50 26,40" fill="#e60012" opacity="0.85"/>
+  <polygon points="10,20 22,40 10,50 -2,40" fill="#e60012" opacity="0.85"/>
+  <text x="56" y="32" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#e0e8f0" letter-spacing="0.5">MITSUBISHI</text>
+  <text x="56" y="46" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="400" fill="#b8c4d4" letter-spacing="1.5">ELECTRIC</text>
+</svg>

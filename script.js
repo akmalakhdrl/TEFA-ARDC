@@ -81,4 +81,25 @@ document.addEventListener('DOMContentLoaded', () => {
   wa && wa.addEventListener('click', (e) => { e.preventDefault(); window.open(waUrl('Halo ARDC, saya tertarik...'), '_blank'); });
   waQuick && waQuick.addEventListener('click', (e) => { e.preventDefault(); window.open(waUrl('Halo ARDC, saya ingin konsultasi...'), '_blank'); });
 
+  // Brand Partner Tooltip
+  const tooltip = document.getElementById('partner-tooltip');
+  const partnerCards = document.querySelectorAll('.partner-card');
+  if (tooltip && partnerCards.length) {
+    partnerCards.forEach(card => {
+      card.addEventListener('mouseenter', (e) => {
+        const name = card.dataset.partner || '';
+        const desc = card.dataset.desc || '';
+        tooltip.innerHTML = `<span class="tt-name">${name}</span><span class="tt-desc">${desc}</span>`;
+        tooltip.classList.add('active');
+      });
+      card.addEventListener('mousemove', (e) => {
+        tooltip.style.left = (e.clientX + 16) + 'px';
+        tooltip.style.top = (e.clientY - 50) + 'px';
+      });
+      card.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('active');
+      });
+    });
+  }
+
 });
