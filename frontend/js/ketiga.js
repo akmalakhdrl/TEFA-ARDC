@@ -32,34 +32,8 @@ function closeOrderModal() {
 let isAutoScrolling = true;
 
 function startAutoScroll() {
-    let scrollPosition = 0;
-    const scrollSpeed = 2;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-
-    const autoScrollInterval = setInterval(() => {
-        if (!isAutoScrolling || document.getElementById('contact-modal').classList.contains('active')) {
-            return;
-        }
-
-        scrollPosition += scrollSpeed;
-
-        if (scrollPosition >= maxScroll) {
-            scrollPosition = 0;
-        }
-
-        window.scrollTo(0, scrollPosition);
-    }, 30);
-
-    // Stop auto-scroll jika user scroll manual
-    document.addEventListener('wheel', () => {
-        isAutoScrolling = false;
-        clearInterval(autoScrollInterval);
-    }, { once: true });
-
-    document.addEventListener('touchmove', () => {
-        isAutoScrolling = false;
-        clearInterval(autoScrollInterval);
-    }, { once: true });
+    // Auto-scroll dinonaktifkan agar posisi scroll tetap mengikuti user.
+    isAutoScrolling = false;
 }
 
 // Scroll Reveal Animation (Intersection Observer)
@@ -80,6 +54,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => observer.observe(el));
 
-    // Mulai auto scroll setelah 2 detik
-    setTimeout(startAutoScroll, 2000);
 });

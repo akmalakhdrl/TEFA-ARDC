@@ -18,7 +18,9 @@
 }
 
 *{box-sizing:border-box}
+*,*::before,*::after{overflow-anchor:none}
 html,body{height:100%}
+html,body{overflow-anchor:none}
 body{
   margin:0;font-family:Inter, Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   background:radial-gradient(1200px 400px at 10% 10%, rgba(0,212,255,0.08), transparent),
@@ -1069,6 +1071,7 @@ svg.brand-icon.small{width:32px;height:32px}
 /* ---------- Products (Wecon Catalog) ---------- */
 .products-section {
   position: relative;
+  overflow-anchor: none;
 }
 /* Brand Selector Dropdown */
 .brand-selector-wrap {

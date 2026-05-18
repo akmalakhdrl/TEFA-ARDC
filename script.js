@@ -3,6 +3,14 @@
 
 let currentLang = localStorage.getItem('ardc-lang') || 'id';
 
+function preserveScrollPosition(mutator) {
+  const scrollY = window.scrollY;
+  mutator();
+  requestAnimationFrame(() => {
+    window.scrollTo(0, scrollY);
+  });
+}
+
 function applyLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('ardc-lang', lang);
@@ -210,45 +218,45 @@ document.addEventListener('DOMContentLoaded', () => {
       opt.addEventListener('click', () => {
         const brand = opt.dataset.brand;
         const brandName = opt.querySelector('span').textContent;
-        // Update active state
-        brandOptions.forEach(o => o.classList.remove('active'));
-        opt.classList.add('active');
-        // Update title
-        brandNameEl.textContent = brandName;
-        // Update subtitle
-        const lang = currentLang || 'id';
-        if (lang === 'id') {
-          prodSubtitle.textContent = `Solusi otomasi industri terpercaya dari ${brandName}`;
-        } else {
-          prodSubtitle.textContent = `Trusted industrial automation solutions from ${brandName}`;
-        }
-        // Close dropdown
-        brandSelectorWrap.classList.remove('open');
-        // Show/hide product cards based on brand (currently only wecon has products)
-        const allCards = document.querySelectorAll('.product-card');
-        if (brand === 'wecon') {
-          allCards.forEach(c => c.classList.remove('hidden'));
-          document.querySelector('.product-tabs').style.display = 'flex';
-        } else {
-          allCards.forEach(c => c.classList.add('hidden'));
-          document.querySelector('.product-tabs').style.display = 'none';
-          // Show coming soon message if not exists
-          let comingSoon = document.getElementById('coming-soon-msg');
-          if (!comingSoon) {
-            comingSoon = document.createElement('div');
-            comingSoon.id = 'coming-soon-msg';
-            comingSoon.className = 'coming-soon glass';
-            document.querySelector('.products-grid').before(comingSoon);
+        preserveScrollPosition(() => {
+          brandOptions.forEach(o => o.classList.remove('active'));
+          opt.classList.add('active');
+          brandNameEl.textContent = brandName;
+
+          const lang = currentLang || 'id';
+          if (lang === 'id') {
+            prodSubtitle.textContent = `Solusi otomasi industri terpercaya dari ${brandName}`;
+          } else {
+            prodSubtitle.textContent = `Trusted industrial automation solutions from ${brandName}`;
           }
-          const csText = lang === 'id' ? 'Produk segera hadir' : 'Products coming soon';
-          comingSoon.innerHTML = `<p>🔜 ${csText} — <strong>${brandName}</strong></p>`;
-          comingSoon.style.display = 'block';
-        }
-        // Remove coming soon if wecon
-        if (brand === 'wecon') {
-          const cs = document.getElementById('coming-soon-msg');
-          if (cs) cs.style.display = 'none';
-        }
+
+          brandSelectorWrap.classList.remove('open');
+
+          const allCards = document.querySelectorAll('.product-card');
+          if (brand === 'wecon') {
+            allCards.forEach(c => c.classList.remove('hidden'));
+            document.querySelector('.product-tabs').style.display = 'flex';
+          } else {
+            allCards.forEach(c => c.classList.add('hidden'));
+            document.querySelector('.product-tabs').style.display = 'none';
+
+            let comingSoon = document.getElementById('coming-soon-msg');
+            if (!comingSoon) {
+              comingSoon = document.createElement('div');
+              comingSoon.id = 'coming-soon-msg';
+              comingSoon.className = 'coming-soon glass';
+              document.querySelector('.products-grid').before(comingSoon);
+            }
+            const csText = lang === 'id' ? 'Produk segera hadir' : 'Products coming soon';
+            comingSoon.innerHTML = `<p>🔜 ${csText} — <strong>${brandName}</strong></p>`;
+            comingSoon.style.display = 'block';
+          }
+
+          if (brand === 'wecon') {
+            const cs = document.getElementById('coming-soon-msg');
+            if (cs) cs.style.display = 'none';
+          }
+        });
       });
     });
   }
@@ -259,17 +267,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (productTabs.length && productCards.length) {
     productTabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        // Update active tab
-        productTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
+        preserveScrollPosition(() => {
+          productTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
 
-        const filter = tab.dataset.filter;
-        productCards.forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
+          const filter = tab.dataset.filter;
+          productCards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
         });
       });
     });
@@ -414,7 +423,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!adCarouselTrack) return;
     const slide = adCarouselTrack.children[idx];
     if (slide) {
-      slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      adCarouselTrack.scrollTo({
+        left: slide.offsetLeft,
+        behavior: 'smooth'
+      });
       updateActiveDot(idx);
     }
   };
@@ -431,10 +443,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const startAdAutoScroll = () => {
     if (adCarouselTimer) clearInterval(adCarouselTimer);
-    adCarouselTimer = setInterval(() => {
-      adCurrentSlide = (adCurrentSlide + 1) % adProducts.length;
-      scrollToSlide(adCurrentSlide);
-    }, 7000);
   };
 
   const setupAdCarouselNav = () => {
@@ -458,7 +466,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (adCarouselTrack) {
     renderAdCarousel();
     setupAdCarouselNav();
-    startAdAutoScroll();
   }
 
 
