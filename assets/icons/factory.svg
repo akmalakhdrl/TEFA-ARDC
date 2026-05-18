@@ -1,1 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="#68f0ff" d="M4 44v12h56V28L44 36V20L28 28v16H4z"/><path fill="#00a8ff" d="M10 44h8v8h-8zM22 40h8v12h-8zM36 32h8v20h-8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Factory building -->
+  <rect x="4" y="36" width="56" height="22" rx="2" fill="#0a2540" stroke="#00d4ff" stroke-width="1"/>
+  <!-- Roof with chimney -->
+  <polygon points="4,36 20,24 36,36" fill="#0d3060" stroke="#00d4ff" stroke-width="1"/>
+  <polygon points="28,36 44,24 60,36" fill="#0d3060" stroke="#00d4ff" stroke-width="1"/>
+  <!-- Chimney -->
+  <rect x="13" y="16" width="5" height="12" fill="#041022" stroke="#00a8cc" stroke-width="0.8"/>
+  <rect x="38" y="16" width="5" height="12" fill="#041022" stroke="#00a8cc" stroke-width="0.8"/>
+  <!-- Smoke puffs -->
+  <circle cx="15" cy="13" r="3" fill="#00d4ff" opacity="0.5"/>
+  <circle cx="17" cy="10" r="2.2" fill="#00d4ff" opacity="0.3"/>
+  <circle cx="40" cy="13" r="3" fill="#68f0ff" opacity="0.5"/>
+  <circle cx="42" cy="10" r="2.2" fill="#68f0ff" opacity="0.3"/>
+  <!-- Robotic arm -->
+  <rect x="30" y="28" width="4" height="10" rx="2" fill="#ff7a2d" stroke="#ff9a4d" stroke-width="0.5"/>
+  <rect x="26" y="38" width="12" height="4" rx="2" fill="#ff7a2d" stroke="#ff9a4d" stroke-width="0.5"/>
+  <!-- Conveyor belt -->
+  <rect x="8" y="50" width="48" height="5" rx="2.5" fill="#0d3060" stroke="#00a8cc" stroke-width="1"/>
+  <circle cx="12" cy="52.5" r="3" fill="#00d4ff"/>
+  <circle cx="52" cy="52.5" r="3" fill="#00d4ff"/>
+  <!-- Boxes on conveyor -->
+  <rect x="22" y="44" width="7" height="6" rx="1" fill="#ff7a2d" opacity="0.9"/>
+  <rect x="35" y="44" width="7" height="6" rx="1" fill="#ff7a2d" opacity="0.9"/>
+  <!-- Gear left -->
+  <circle cx="11" cy="42" r="4" fill="none" stroke="#68f0ff" stroke-width="1.5" stroke-dasharray="2 1.5"/>
+  <!-- Windows -->
+  <rect x="6" y="40" width="5" height="4" rx="0.5" fill="#00d4ff" opacity="0.4"/>
+  <rect x="45" y="40" width="5" height="4" rx="0.5" fill="#00d4ff" opacity="0.4"/>
+</svg>
