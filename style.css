@@ -1202,6 +1202,22 @@ svg.brand-icon.small{width:32px;height:32px}
   filter: grayscale(0) brightness(1.1);
 }
 
+
+.brand-divider {
+  height: 1px;
+  background: rgba(0,229,255,0.15);
+  margin: 4px 0;
+}
+.brand-other {
+  text-align: center;
+  justify-content: center;
+  font-style: italic;
+  opacity: 0.85;
+}
+.brand-other:hover {
+  opacity: 1;
+}
+
 /* Training Class Selector */
 .product-header-controls {
   display: flex;

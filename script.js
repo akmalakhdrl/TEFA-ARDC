@@ -257,7 +257,22 @@ document.addEventListener('DOMContentLoaded', () => {
           brandSelectorWrap.classList.remove('open');
 
           const allCards = document.querySelectorAll('.product-card');
-          if (brand === 'wecon') {
+          if (brand === 'other') {
+            // Handle "Menu Lainnya" option
+            allCards.forEach(c => c.classList.add('hidden'));
+            document.querySelector('.product-tabs').style.display = 'none';
+            
+            let menuLainnya = document.getElementById('menu-lainnya-msg');
+            if (!menuLainnya) {
+              menuLainnya = document.createElement('div');
+              menuLainnya.id = 'menu-lainnya-msg';
+              menuLainnya.className = 'coming-soon glass';
+              document.querySelector('.products-grid').before(menuLainnya);
+            }
+            const mlText = lang === 'id' ? 'Layanan dan produk lainnya dapat dilihat di halaman-halaman berikutnya' : 'Other services and products can be found on the following pages';
+            menuLainnya.innerHTML = `<p>📋 ${mlText}</p>`;
+            menuLainnya.style.display = 'block';
+          } else if (brand === 'wecon') {
             allCards.forEach(c => c.classList.remove('hidden'));
             document.querySelector('.product-tabs').style.display = 'flex';
           } else {
@@ -277,6 +292,11 @@ document.addEventListener('DOMContentLoaded', () => {
           }
 
           if (brand === 'wecon') {
+            const cs = document.getElementById('coming-soon-msg');
+            if (cs) cs.style.display = 'none';
+            const ml = document.getElementById('menu-lainnya-msg');
+            if (ml) ml.style.display = 'none';
+          } else if (brand === 'other') {
             const cs = document.getElementById('coming-soon-msg');
             if (cs) cs.style.display = 'none';
           }
