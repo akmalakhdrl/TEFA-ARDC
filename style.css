@@ -425,8 +425,12 @@ svg.brand-icon.small{width:32px;height:32px}
 .lokasi-section{padding:80px 0}
 .section-header{text-align:center;margin-bottom:60px}
 .lokasi-container{display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:start}
-.lokasi-map-wrapper{border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(0,229,255,0.15);transition:all 0.3s ease}
+.lokasi-map-wrapper{border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(0,229,255,0.15);transition:all 0.3s ease;background:rgba(0,229,255,0.05);border:1px solid rgba(0,229,255,0.1)}
 .lokasi-map-wrapper:hover{box-shadow:0 12px 32px rgba(0,229,255,0.25)}
+.map-label{background:linear-gradient(135deg, rgba(0,229,255,0.12) 0%, rgba(0,229,255,0.04) 100%);padding:16px 20px;border-bottom:2px solid rgba(0,229,255,0.2);display:flex;align-items:center;justify-content:space-between}
+.map-label-content{flex:1}
+.map-badge{display:inline-block;background:linear-gradient(135deg, #00e5ff 0%, #00acc1 100%);color:#0d1620;padding:6px 14px;border-radius:20px;font-weight:700;font-size:12px;letter-spacing:0.5px;margin-bottom:8px}
+.map-label h4{color:#f0f5fb;font-size:16px;margin:0;font-weight:700;line-height:1.4}
 .lokasi-info h3{color:#f0f5fb;font-size:24px;margin:0 0 28px;font-weight:700}
 .detail-item{display:flex;gap:16px;margin-bottom:24px;padding:16px;border-radius:12px;background:rgba(0,229,255,0.04);border:1px solid rgba(0,229,255,0.1);transition:all 0.3s ease}
 .detail-item:hover{background:rgba(0,229,255,0.08);border-color:rgba(0,229,255,0.2)}
@@ -1441,6 +1445,7 @@ svg.brand-icon.small{width:32px;height:32px}
   .mobile-toggle{display:inline-flex;margin-left:10px;flex-shrink:0}
   .ctas{display:none}
   .lang-toggle{margin-left:auto;flex-shrink:0}
+  .lokasi-container{grid-template-columns:1fr}
   .footer-top{grid-template-columns:1fr;gap:28px}
 }
 
